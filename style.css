@@ -65,14 +65,16 @@ body {
     height: 25px;
     border-radius: 50%;
 }
+
 .fast100 {
     animation: blink 100ms infinite;
     animation-timing-function: steps(2, jump-none);
 }
+
 .fast50 {
     animation: blink 50ms infinite;
 }
-    animation-timing-function: steps(2, jump-none);
+
 .fast {
     animation: blink 500ms infinite;
     animation-timing-function: steps(2, jump-none);
@@ -112,30 +114,37 @@ body {
     animation: blink-orange 1000ms infinite;
     animation-timing-function: steps(2, jump-none);
 }
+
 .blink-red {
     animation: blink-red 1000ms infinite;
     animation-timing-function: steps(2, jump-none);
 }
+
 .blink-red-fast {
     animation: blink-red 500ms infinite;
     animation-timing-function: steps(2, jump-none);
 }
+
 .blink-yellow {
     animation: blink-yellow 1000ms infinite;
     animation-timing-function: steps(2, jump-none);
 }
+
 .blink-yellow-fast {
     animation: blink-yellow 500ms infinite;
     animation-timing-function: steps(2, jump-none);
 }
+
 .blink-orange-fast {
     animation: blink-orange 500ms infinite;
     animation-timing-function: steps(2, jump-none);
 }
+
 .blink-black {
     animation: blink-black 1000ms infinite;
     animation-timing-function: steps(2, jump-none);
 }
+
 .slow-orange {
     animation: blink-orange 2000ms infinite;
     animation-timing-function: steps(2, jump-none);
@@ -228,16 +237,19 @@ body {
         background-color: orange;
     }
 }
+
 @keyframes blink-red {
     100% {
         background-color: red;
     }
 }
+
 @keyframes blink-yellow {
     100% {
         background-color: yellow;
     }
 }
+
 @keyframes blink-black {
     100% {
         background-color: black;
@@ -245,17 +257,37 @@ body {
 }
 
 @keyframes vivid-blink-blink-pause {
-    0%   { background-color: green; }
-    20%  { background-color: green; }
+    0% {
+        background-color: green;
+    }
 
-    20.0001% { background-color: black; }
-    40%      { background-color: black; }
+    20% {
+        background-color: green;
+    }
 
-    40.0001% { background-color: green; }
-    60%      { background-color: green; }
+    20.0001% {
+        background-color: black;
+    }
 
-    60.0001% { background-color: black; }
-    100%     { background-color: black; }
+    40% {
+        background-color: black;
+    }
+
+    40.0001% {
+        background-color: green;
+    }
+
+    60% {
+        background-color: green;
+    }
+
+    60.0001% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: black;
+    }
 }
 
 .led {
