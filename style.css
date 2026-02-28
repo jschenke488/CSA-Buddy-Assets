@@ -8,7 +8,8 @@ body {
 }
 .led-table {
     border-collapse: collapse;
-    width: 325px;
+    min-width: 325px;
+    width: 80vw;
 }
 .section-table td {
     border: 0;
@@ -50,6 +51,14 @@ body {
     height: 25px;
     border-radius: 50%;
 }
+.fast100 {
+    animation: blink 100ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+.fast50 {
+    animation: blink 50ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
 .fast {
     animation: blink 500ms infinite;
     animation-timing-function: steps(2, jump-none);
@@ -80,6 +89,30 @@ body {
 }
 .blink-orange {
     animation: blink-orange 1000ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+.blink-red {
+    animation: blink-red 1000ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+.blink-red-fast {
+    animation: blink-red 500ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+.blink-yellow {
+    animation: blink-yellow 1000ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+.blink-yellow-fast {
+    animation: blink-yellow 500ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+.blink-orange-fast {
+    animation: blink-orange 500ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+.blink-black {
+    animation: blink-black 1000ms infinite;
     animation-timing-function: steps(2, jump-none);
 }
 .slow-orange {
@@ -150,6 +183,21 @@ body {
 @keyframes blink-orange {
     100% {
         background-color: orange;
+    }
+}
+@keyframes blink-red {
+    100% {
+        background-color: red;
+    }
+}
+@keyframes blink-yellow {
+    100% {
+        background-color: yellow;
+    }
+}
+@keyframes blink-black {
+    100% {
+        background-color: black;
     }
 }
 .led {

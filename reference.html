@@ -305,6 +305,8 @@
     </table>
 </details>
 
+<br>
+
 <details>
     <summary>REV Motor Controller Lights</summary>
 
@@ -514,7 +516,7 @@
 </details>
 
 <details>
-    <summary>CANivore Lights</summary>
+    <summary>CTRE CANivore Lights</summary>
 
     <table cellpadding="5" cellspacing="0" class="led-table">
         <tr>
@@ -624,6 +626,151 @@
 </details>
 
 <details>
+    <summary>CTRE CANcoder Lights</summary>
+
+    <table cellpadding="5" cellspacing="0" class="led-table">
+        <tr>
+            <td>
+                <table class="section-table">
+                    <tr>
+                        <td class="green blink-orange led"> </td>
+                        <td>Bootloader</td>
+                    </tr>
+                    <tr>
+                        <td class="green blink-red led"> </td>
+                        <td>Unlicensed Phoenix Pro</td>
+                    </tr>
+                    <tr>
+                        <td class="red slow led"></td>
+                        <td>CAN bus lost</td>
+                    </tr>
+                    <tr>
+                        <td class="red fast led"></td>
+                        <td>Magnet is out of range (&lt;25mT or &gt;135mT)</td>
+                    </tr>
+                    <tr>
+                        <td class="orange fast led"></td>
+                        <td>Magnet in range with <i>slightly</i> reduced accuracy (25-45mT or 75-135mT)</td>
+                    </tr>
+                    <tr>
+                        <td class="green fast led"></td>
+                        <td>Magnet in range (between 45mT-75mT)</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</details>
+
+<details>
+    <summary>CTRE Pigeon Lights</summary>
+
+    <table cellpadding="5" cellspacing="0" class="led-table">
+        <tr>
+            <td>
+                <table class="section-table">
+                    <tr>
+                        <td class="green blink-orange led"> </td>
+                        <td class="black led"> </td>
+                        <td>Bootloader</td>
+                    </tr>
+                    <tr>
+                        <td class="red led"> </td>
+                        <td class="orange led"> </td>
+                        <td>Damaged hardware</td>
+                    </tr>
+                    <tr>
+                        <td class="red led"> </td>
+                        <td class="green led"> </td>
+                        <td>Unlicensed Phoenix Pro</td>
+                    </tr>
+                    <tr>
+                        <td class="red blink led"> </td>
+                        <td class="red blink led"> </td>
+                        <td>No CAN bus detected</td>
+                    </tr>
+                    <tr>
+                        <td class="black blink-orange led"> </td>
+                        <td class="orange blink-black led"> </td>
+                        <td>CAN bus detected. Robot controller is not present on CAN bus, or Pigeon2 software object not created in user application.</td>
+                    </tr>
+                    <tr>
+                        <td class="orange blink led"> </td>
+                        <td class="orange blink led"> </td>
+                        <td>CAN bus detected. Robot disabled.</td>
+                    </tr>
+                    <tr>
+                        <td class="green blink led"> </td>
+                        <td class="green blink led"> </td>
+                        <td>CAN bus detected. Robot enabled.</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</details>
+
+<details>
+    <summary>Thrifty Nova Lights</summary>
+
+    <table cellpadding="5" cellspacing="0" class="led-table">
+        <tr>
+            <td>
+                <table class="section-table">
+                    <tr>
+                        <td class="red fast led"> </td>
+                        <td class="black blink-red-fast led"> </td>
+                        <td>Fatal fault</td>
+                    </tr>
+                    <tr>
+                        <td class="blue fast100 led"> </td>
+                        <td class="blue fast100 led"> </td>
+                        <td>Encoder not connected or invalid</td>
+                    </tr>
+                    <tr>
+                        <td class="yellow fast led"> </td>
+                        <td class="black blink-yellow-fast led"> </td>
+                        <td>Enabled but output power is 0%</td>
+                    </tr>
+                    <tr>
+                        <td class="yellow fast led"> </td>
+                        <td class="yellow fast led"> </td>
+                        <td>No CAN data detected</td>
+                    </tr>
+                    <tr>
+                        <td class="yellow led"> </td>
+                        <td class="yellow led"> </td>
+                        <td>CAN detected but no control frames</td>
+                    </tr>
+                    <tr>
+                        <td class="green blink led"> </td>
+                        <td class="green blink led"> </td>
+                        <td>Forward motion. Flash rate = speed</td>
+                    </tr>
+                    <tr>
+                        <td class="red blink led"> </td>
+                        <td class="red blink led"> </td>
+                        <td>Reverse motion. Flash rate = speed</td>
+                    </tr>
+                    <tr>
+                        <td class="orange fast led"> </td>
+                        <td class="orange fast led"> </td>
+                        <td>Motor halted. High temperature &gt;90&deg;C</td>
+                    </tr>
+                    <tr>
+                        <td class="orange fast50 led"> </td>
+                        <td class="orange fast50 led"> </td>
+                        <td>Warning. Approaching thermal limit &gt;75&deg;C</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</details>
+
+<br>
+
+<details>
     <summary>FRC Basic Wiring Diagram</summary>
 
     <img alt="Layout of the core components of the control system and introductory information for them" src="frc-control-system-layout-basic.svg" style="background:white;max-width:90%">
@@ -657,6 +804,8 @@
     <img alt="Advanced Control Hub RC Diagram" src="ftc-control-system-layout-b2.svg" style="background:white;max-width:90%">
     <p>Diagram courtesy of FRC® Team 3161 and Stefen Acepcion.</p>
 </details>
+
+<br>
 
 <details>
     <summary>Component Manuals</summary>
