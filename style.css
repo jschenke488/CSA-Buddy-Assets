@@ -16,6 +16,7 @@ body {
 
 .section-table td {
     border: 0;
+    vertical-align: top;
 }
 
 .bold {
@@ -73,6 +74,7 @@ body {
 
 .fast50 {
     animation: blink 50ms infinite;
+    animation-timing-function: steps(2, jump-none);
 }
 
 .fast {
@@ -86,18 +88,53 @@ body {
 }
 
 .double-blink-red {
-    animation: double-blink-orange 1000ms infinite;
+    animation: double-blink-red 2000ms infinite;
     animation-timing-function: steps(3, jump-none);
 }
 
 .double-blink-orange {
-    animation: double-blink-orange 1000ms infinite;
+    animation: double-blink-orange 2000ms infinite;
     animation-timing-function: steps(3, jump-none);
 }
 
 .double-blink-green {
-    animation: double-blink-green 1000ms infinite;
+    animation: double-blink-green 2000ms infinite;
     animation-timing-function: steps(3, jump-none);
+}
+
+.offset-orange-a {
+    animation: offset-orange-A 1000ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+
+.offset-orange-b {
+    animation: offset-orange-B 1000ms infinite;
+    animation-timing-function: steps(3, jump-none);
+}
+
+.offset-red-a {
+    animation: offset-red-A 1000ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+
+.offset-red-b {
+    animation: offset-red-B 1000ms infinite;
+    animation-timing-function: steps(3, jump-none);
+}
+
+.fast-strobe-red {
+    animation: fast-strobe-red 333ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+
+.fast-strobe-orange {
+    animation: fast-strobe-orange 333ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+
+.fast-strobe-green {
+    animation: fast-strobe-green 333ms infinite;
+    animation-timing-function: steps(2, jump-none);
 }
 
 .blink-white {
@@ -112,6 +149,11 @@ body {
 
 .blink-orange {
     animation: blink-orange 1000ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+
+.blink-orange-fast {
+    animation: blink-orange 500ms infinite;
     animation-timing-function: steps(2, jump-none);
 }
 
@@ -135,8 +177,8 @@ body {
     animation-timing-function: steps(2, jump-none);
 }
 
-.blink-orange-fast {
-    animation: blink-orange 500ms infinite;
+.blink-green {
+    animation: blink-green 1000ms infinite;
     animation-timing-function: steps(2, jump-none);
 }
 
@@ -170,16 +212,28 @@ body {
         background-color: red;
     }
 
-    59% {
+    16.67% {
         background-color: red;
     }
-
-    60% {
+    
+    17% {
+        background-color: black;
+    }
+    
+    33% {
         background-color: black;
     }
 
-    80% {
+    33.33% {
         background-color: red;
+    }
+
+    49% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: black;
     }
 
     100% {
@@ -192,16 +246,28 @@ body {
         background-color: orange;
     }
 
-    59% {
+    16.67% {
         background-color: orange;
     }
-
-    60% {
+    
+    17% {
+        background-color: black;
+    }
+    
+    33% {
         background-color: black;
     }
 
-    80% {
+    33.33% {
         background-color: orange;
+    }
+
+    49% {
+        background-color: orange;
+    }
+
+    50% {
+        background-color: black;
     }
 
     100% {
@@ -214,16 +280,170 @@ body {
         background-color: green;
     }
 
-    59% {
+    16.67% {
         background-color: green;
     }
-
-    60% {
+    
+    17% {
+        background-color: black;
+    }
+    
+    33% {
         background-color: black;
     }
 
-    80% {
+    33.33% {
         background-color: green;
+    }
+
+    49% {
+        background-color: green;
+    }
+
+    50% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes offset-orange-A {
+    0% {
+        background-color: orange;
+    }
+
+    32% {
+        background-color: orange;
+    }
+
+    33% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes offset-orange-B {
+    0% {
+        background-color: black;
+    }
+
+    32% {
+        background-color: black;
+    }
+
+    33% {
+        background-color: orange;
+    }
+
+    65% {
+        background-color: orange;
+    }
+
+    66% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes offset-red-A {
+    0% {
+        background-color: red;
+    }
+
+    32% {
+        background-color: red;
+    }
+
+    33% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes offset-red-B {
+    0% {
+        background-color: black;
+    }
+
+    32% {
+        background-color: black;
+    }
+
+    33% {
+        background-color: red;
+    }
+
+    65% {
+        background-color: red;
+    }
+
+    66% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes fast-strobe-red {
+    0% {
+        background-color: red;
+    }
+
+    79% {
+        background-color: red;
+    }
+
+    80% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes fast-strobe-orange {
+    0% {
+        background-color: orange;
+    }
+
+    79% {
+        background-color: orange;
+    }
+
+    80% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes fast-strobe-green {
+    0% {
+        background-color: green;
+    }
+
+    79% {
+        background-color: green;
+    }
+
+    80% {
+        background-color: black;
     }
 
     100% {
@@ -252,6 +472,12 @@ body {
 @keyframes blink-yellow {
     100% {
         background-color: yellow;
+    }
+}
+
+@keyframes blink-green {
+    100% {
+        background-color: green;
     }
 }
 
@@ -297,17 +523,13 @@ body {
 
 .led {
     width: 50px;
-    border: .5px black solid !important;
+    border: 1px black solid !important;
 }
 
 .highlight {
     background-color: #FBC02D;
     font-weight: bold;
     color: #000000;
-}
-
-.section-table td {
-    vertical-align: top;
 }
 
 summary {

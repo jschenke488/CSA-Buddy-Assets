@@ -500,47 +500,87 @@
             <td>
                 <table class="section-table">
                     <tr>
-                        <td colspan="3" class="bold">Lights alternate rather than blink</td>
+                        <td colspan="3" class="bold">Disabled Codes</td>
                     </tr>
                     <tr>
+                        <td class="black led"> </td>
                         <td class="black led"> </td>
                         <td>No Power</td>
                     </tr>
                     <tr>
-                        <td class="orange blink led"> </td>
-                        <td>CAN bus detected, robot disabled</td>
-                    </tr>
-                    <tr>
-                        <td class="red slow led"> </td>
+                        <td class="red blink led"> </td>
+                        <td class="black blink-red led"> </td>
                         <td>CAN bus/PWM is not detected</td>
                     </tr>
                     <tr>
-                        <td class="red fast led"> </td>
-                        <td>Fault Detected</td>
+                        <td class="orange blink led"> </td>
+                        <td class="black blink-orange led"> </td>
+                        <td>CAN bus detected, Phoenix not running on robot</td>
                     </tr>
                     <tr>
-                        <td class="red blink-orange led"> </td>
-                        <td>Damaged Hardware</td>
+                        <td class="orange blink led"> </td>
+                        <td class="orange blink led"> </td>
+                        <td>CAN bus detected, robot disabled</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <table class="section-table">
+                    <tr>
+                        <td colspan="3" class="bold">Enabled Codes</td>
                     </tr>
                     <tr>
-                        <td class="green blink-orange led"> </td>
-                        <td>In Boot-loader</td>
+                        <td class="orange led"> </td>
+                        <td class="orange led"> </td>
+                        <td>Enabled, no output</td>
                     </tr>
                     <tr>
-                        <td class="orange fast led"> </td>
-                        <td>Thermal Shutoff (Falcon only)</td>
-                    </tr>
-                    <tr>
-                        <td class="green fast led"> </td>
-                        <td>Forward Movement</td>
-                    </tr>
-                    <tr>
-                        <td class="red fast led"> </td>
+                        <td class="red blink led"> </td>
+                        <td class="red blink led"> </td>
                         <td>Reverse Movement</td>
                     </tr>
                     <tr>
-                        <td class="red led"> </td>
-                        <td>Limit Switch/Soft Limit</td>
+                        <td class="green blink led"> </td>
+                        <td class="green blink led"> </td>
+                        <td>Forward Movement</td>
+                    </tr>
+                    <tr>
+                        <td class="offset-red-a led"> </td>
+                        <td class="offset-red-b led"> </td>
+                        <td>Limit hit. Direction of blink indicates forward/reverse.</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <table class="section-table">
+                    <tr>
+                        <td colspan="3" class="bold">Special Codes</td>
+                    </tr>
+                    <tr>
+                        <td class="offset-orange-a led"> </td>
+                        <td class="offset-orange-b led"> </td>
+                        <td>Thermal Shutoff</td>
+                    </tr>
+                    <tr>
+                        <td class="green blink-red led"> </td>
+                        <td class="red blink-green led"> </td>
+                        <td>Unlicensed Phoenix Pro</td>
+                    </tr>
+                    <tr>
+                        <td class="red blink-orange led"> </td>
+                        <td class="orange blink-red led"> </td>
+                        <td>Hardware Damage</td>
+                    </tr>
+                    <tr>
+                        <td class="black led"> </td>
+                        <td class="green blink-orange led"> </td>
+                        <td>Bootloader</td>
                     </tr>
                 </table>
             </td>
@@ -559,11 +599,15 @@
                         <td colspan="2" class="bold">STAT</td>
                     </tr>
                     <tr>
-                        <td class="red double-blink led"> </td>
+                        <td class="black led"> </td>
+                        <td>No Power</td>
+                    </tr>
+                    <tr>
+                        <td class="double-blink-red led"> </td>
                         <td>Powered but USB not plugged in</td>
                     </tr>
                     <tr>
-                        <td class="red fast led"> </td>
+                        <td class="fast-strobe-red led"> </td>
                         <td>USB plugged in but no comms</td>
                     </tr>
                     <tr>
@@ -571,7 +615,7 @@
                         <td>CAN disabled, no power</td>
                     </tr>
                     <tr>
-                        <td class="orange blink led"> </td>
+                        <td class="fast-strobe-orange led"> </td>
                         <td>CAN disabled</td>
                     </tr>
                     <tr>
@@ -579,16 +623,16 @@
                         <td>CAN enabled, no power</td>
                     </tr>
                     <tr>
-                        <td class="green blink led"> </td>
+                        <td class="fast-strobe-green led"> </td>
                         <td>CAN enabled</td>
                     </tr>
                     <tr>
-                        <td class="green blink-orange led"> </td>
-                        <td>Bootloader</td>
+                        <td class="red blink-orange-fast led"> </td>
+                        <td>Hardware Damage</td>
                     </tr>
                     <tr>
-                        <td class="red blink-orange led"> </td>
-                        <td>Hardware Damage</td>
+                        <td class="green blink-orange-fast led"> </td>
+                        <td>Bootloader</td>
                     </tr>
                 </table>
             </td>
@@ -601,7 +645,7 @@
                         <td colspan="2" class="bold">WIFI</td>
                     </tr>
                     <tr>
-                        <td class="green led"> </td>
+                        <td class="green fast led"> </td>
                         <td>Wi-Fi Enabled</td>
                     </tr>
                     <tr>
@@ -619,7 +663,7 @@
                         <td colspan="2" class="bold">BT</td>
                     </tr>
                     <tr>
-                        <td class="green led"> </td>
+                        <td class="green fast led"> </td>
                         <td>Bluetooth Enabled</td>
                     </tr>
                     <tr>
@@ -641,15 +685,15 @@
                         <td>Voltage too low for CAN bus</td>
                     </tr>
                     <tr>
-                        <td class="red fast led"> </td>
+                        <td class="fast-strobe-red led"> </td>
                         <td>No CAN comms</td>
                     </tr>
                     <tr>
-                        <td class="orange fast led"> </td>
+                        <td class="fast-strobe-orange led"> </td>
                         <td>CAN 2.0b legacy mode</td>
                     </tr>
                     <tr>
-                        <td class="green fast led"> </td>
+                        <td class="fast-strobe-green led"> </td>
                         <td>CAN FD Active</td>
                     </tr>
                 </table>
@@ -666,28 +710,35 @@
             <td>
                 <table class="section-table">
                     <tr>
-                        <td class="green blink-orange led"> </td>
-                        <td>Bootloader</td>
+                        <td colspan="2" class="bold">(dim = no CAN)</td>
                     </tr>
                     <tr>
-                        <td class="green blink-red led"> </td>
-                        <td>Unlicensed Phoenix Pro</td>
+                        <td class="black led"> </td>
+                        <td>No Power</td>
                     </tr>
                     <tr>
-                        <td class="red slow led"></td>
+                        <td class="black blink-red led"></td>
                         <td>CAN bus lost</td>
                     </tr>
                     <tr>
-                        <td class="red fast led"></td>
+                        <td class="fast-strobe-red led"></td>
                         <td>Magnet is out of range (&lt;25mT or &gt;135mT)</td>
                     </tr>
                     <tr>
-                        <td class="orange fast led"></td>
+                        <td class="fast-strobe-orange led"></td>
                         <td>Magnet in range with <i>slightly</i> reduced accuracy (25-45mT or 75-135mT)</td>
                     </tr>
                     <tr>
-                        <td class="green fast led"></td>
+                        <td class="fast-strobe-green led"></td>
                         <td>Magnet in range (between 45mT-75mT)</td>
+                    </tr>
+                    <tr>
+                        <td class="red blink-orange led"> </td>
+                        <td>Hardware Damage</td>
+                    </tr>
+                    <tr>
+                        <td class="green blink-orange led"> </td>
+                        <td>Bootloader</td>
                     </tr>
                 </table>
             </td>
@@ -703,23 +754,13 @@
             <td>
                 <table class="section-table">
                     <tr>
-                        <td class="green blink-orange led"> </td>
                         <td class="black led"> </td>
-                        <td>Bootloader</td>
-                    </tr>
-                    <tr>
-                        <td class="red led"> </td>
-                        <td class="orange led"> </td>
-                        <td>Damaged hardware</td>
-                    </tr>
-                    <tr>
-                        <td class="red led"> </td>
-                        <td class="green led"> </td>
-                        <td>Unlicensed Phoenix Pro</td>
+                        <td class="black led"> </td>
+                        <td>No Power</td>
                     </tr>
                     <tr>
                         <td class="red blink led"> </td>
-                        <td class="red blink led"> </td>
+                        <td class="black blink-red led"> </td>
                         <td>No CAN bus detected</td>
                     </tr>
                     <tr>
@@ -734,8 +775,18 @@
                     </tr>
                     <tr>
                         <td class="green blink led"> </td>
-                        <td class="green blink led"> </td>
+                        <td class="black blink-green led"> </td>
                         <td>CAN bus detected. Robot enabled.</td>
+                    </tr>
+                    <tr>
+                        <td class="red blink-orange led"> </td>
+                        <td class="orange blink-red led"> </td>
+                        <td>Hardware Damage</td>
+                    </tr>
+                    <tr>
+                        <td class="black led"> </td>
+                        <td class="green blink-orange led"> </td>
+                        <td>Bootloader</td>
                     </tr>
                 </table>
             </td>
