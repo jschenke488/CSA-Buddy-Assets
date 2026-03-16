@@ -105,8 +105,8 @@ body {
     animation-timing-function: steps(2, jump-none);
 }
 
-.fast-white {
-    animation: blink-white 1000ms infinite;
+.blink-white-fast250 {
+    animation: blink-white 250ms infinite;
     animation-timing-function: steps(2, jump-none);
 }
 
@@ -142,6 +142,11 @@ body {
 
 .blink-black {
     animation: blink-black 1000ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+
+.slow-white {
+    animation: blink-white 2000ms infinite;
     animation-timing-function: steps(2, jump-none);
 }
 
