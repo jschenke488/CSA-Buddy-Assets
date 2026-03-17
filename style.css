@@ -19,6 +19,15 @@ body {
     vertical-align: top;
 }
 
+.has-color-description {
+    width: 100%;
+}
+
+.has-color-description td:last-child {
+    text-align: right;
+    padding-right: 10px;
+}
+
 .bold {
     font-weight: bold;
 }
