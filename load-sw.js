@@ -6,5 +6,11 @@ const isWebView = /CSABuddy/.test(navigator.userAgent);
 if ('serviceWorker' in navigator && !isWebView) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register(serviceWorker)
+        .then(registration => {
+            console.log('ServiceWorker registered. Scope: ', registration.scope);
+        })
+        .catch(error => {
+            console.error('ServiceWorker registration failed: ', error);
+        });
     });
 }
