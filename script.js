@@ -7,3 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('isWebView');
     }
 });
+
+const serviceWorker = '/sw.js'
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register(serviceWorker)
+    });
+}
