@@ -20,3 +20,4 @@ PRs are welcome for anything on this to do list
 ## Miscellaneous
 
 - [ ] Low priority. Split the reference page into multiple pages. For the LEDs, add a devices section with a grid layout showing each device with a picture of the device to identify it. Tap or click on a device to show the list of LEDs and potentially other useful information.
+- [ ] Add version number to about page
