@@ -15,6 +15,7 @@ PRs are welcome for anything on this to do list
 - [ ] Coverage for vision coprocessors other than Limelight
 - [ ] More status codes for the Vivid radio
 - [ ] Disruption recovery timing. This section would include details on how long different devices take to recover from a disruption. For example, if a radio gets disconnected, this section would say how long it would take to reconnect.
+- [ ] PDH status lights for REV and CTRE. Check if AndyMark AMPD has status lights. 
 
 ## Miscellaneous
 
