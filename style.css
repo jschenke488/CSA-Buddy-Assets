@@ -219,6 +219,11 @@ body {
     animation-timing-function: steps(2, jump-none);
 }
 
+.blink-green-50hz {
+    animation: blink-green 20ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+
 .blink-black {
     animation: blink-black 1000ms infinite;
     animation-timing-function: steps(2, jump-none);
