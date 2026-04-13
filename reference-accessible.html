@@ -394,6 +394,115 @@
 <br>
 
 <details>
+    <summary>REV Power Distribution Lights</summary>
+
+    <table cellpadding="5" cellspacing="0" class="led-table">
+        <tr>
+            <td>
+                <table class="section-table has-color-description">
+                    <tr>
+                        <td colspan="3" class="bold">General Status</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="blue led"> </td>
+                        <td>Device on but no communication established</td>
+                        <td><i>Blue</i></td>
+                    </tr>
+                    <tr>
+                        <td class="green led"> </td>
+                        <td>Main communication with robot controller established</td>
+                        <td><i>Green</i></td>
+                    </tr>
+                    <tr>
+                        <td class="magenta blink led"> </td>
+                        <td>Keep alive timeout</td>
+                        <td><i>Magenta Blink</i></td>
+                    </tr>
+                    <tr>
+                        <td class="cyan led"> </td>
+                        <td>Secondary heartbeat (connected to REV Hardware Client)</td>
+                        <td><i>Cyan</i></td>
+                    </tr>
+                    <tr>
+                        <td class="orange blink-blue led"> </td>
+                        <td>Low battery</td>
+                        <td><i>Orange / Blue Alternating</i></td>
+                    </tr>
+                    <tr>
+                        <td class="orange blink-yellow led"> </td>
+                        <td>CAN fault</td>
+                        <td><i>Orange / Yellow Alternating</i></td>
+                    </tr>
+                    <tr>
+                        <td class="orange blink-cyan led"> </td>
+                        <td>Hardware fault</td>
+                        <td><i>Orange / Cyan Alternating</i></td>
+                    </tr>
+                    <tr>
+                        <td class="orange blink-magenta led"> </td>
+                        <td>Device over current</td>
+                        <td><i>Orange / Magenta Alternating</i></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <table class="section-table has-color-description">
+                    <tr>
+                        <td colspan="3" class="bold">Channel Status</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="black led"> </td>
+                        <td>Channel has voltage and is operating as expected</td>
+                        <td><i>Off</i></td>
+                    </tr>
+                    <tr>
+                        <td class="red led"> </td>
+                        <td>Channel has NO voltage and there is an active fault. Check for tripped or missing circuit breaker.</td>
+                        <td><i>Red</i></td>
+                    </tr>
+                    <tr>
+                        <td class="red blink led"> </td>
+                        <td>Sticky fault on the channel. Check for tripped circuit breaker.</td>
+                        <td><i>Red Blink</i></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <table class="section-table has-color-description">
+                    <tr>
+                        <td colspan="3" class="bold">Switched Channel</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="black led"> </td>
+                        <td>Channel has voltage and is operating as expected</td>
+                        <td><i>Off</i></td>
+                    </tr>
+                    <tr>
+                        <td class="red led"> </td>
+                        <td>Channel has NO voltage and there is an active fault. Check for blown or missing fuse.</td>
+                        <td><i>Red</i></td>
+                    </tr>
+                    <tr>
+                        <td class="red blink led"> </td>
+                        <td>Sticky fault on the channel. Check for blown fuse.</td>
+                        <td><i>Red Blink</i></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</details>
+
+<details>
     <summary>REV Motor Controller Lights</summary>
 
     <table cellpadding="5" cellspacing="0" class="led-table">
@@ -566,6 +675,61 @@
                     <tr>
                         <td class="black led"> </td>
                         <td>Corrupt Firmware</td>
+                        <td><i>Off</i></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</details>
+
+<br>
+
+<details>
+    <summary>CTRE Power Distribution Lights</summary>
+
+    <table cellpadding="5" cellspacing="0" class="led-table">
+        <tr>
+            <td>
+                <table class="section-table has-color-description">
+                    <tr>
+                        <td colspan="3" class="bold">COMM / STAT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="green fast led"> </td>
+                        <td class="green fast led"> </td>
+                        <td>Robot is enabled</td>
+                        <td><i>Green Fast Blink</i></td>
+                    </tr>
+                    <tr>
+                        <td class="green slow led"> </td>
+                        <td class="green slow led"> </td>
+                        <td>Robot is disabled</td>
+                        <td><i>Green Slow Blink</i></td>
+                    </tr>
+                    <tr>
+                        <td class="orange slow led"> </td>
+                        <td class="orange slow led"> </td>
+                        <td>Robot is disabled. Sticky fault present.</td>
+                        <td><i>Orange Slow Blink</i></td>
+                    </tr>
+                    <tr>
+                        <td class="red slow led"> </td>
+                        <td class="red slow led"> </td>
+                        <td>No CAN bus</td>
+                        <td><i>Red Slow Blink</i></td>
+                    </tr>
+                    <tr>
+                        <td class="green blink-orange led"> </td>
+                        <td class="black led"> </td>
+                        <td>Device is in bootloader. Field-upgrade necessary.</td>
+                        <td><i>Green / Orange Alternating Blink (COMM only)</i></td>
+                    </tr>
+                    <tr>
+                        <td class="black led"> </td>
+                        <td class="black led"> </td>
+                        <td>Device is NOT powered</td>
                         <td><i>Off</i></td>
                     </tr>
                 </table>
@@ -927,6 +1091,8 @@
     </table>
 </details>
 
+<br>
+
 <details>
     <summary>Thrifty Nova Lights</summary>
 
@@ -993,6 +1159,8 @@
         </tr>
     </table>
 </details>
+
+<br>
 
 <details>
     <summary>Redux CANANDMAG Encoder Lights</summary>
@@ -1089,6 +1257,8 @@
         </tr>
     </table>
 </details>
+
+<br>
 
 <details>
     <summary>Grapple MitoCANdria Lights</summary>
