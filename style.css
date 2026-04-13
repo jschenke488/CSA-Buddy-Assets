@@ -198,6 +198,21 @@ body {
     animation-timing-function: steps(2, jump-none);
 }
 
+.blink-blue {
+    animation: blink-blue 1000ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+
+.blink-cyan {
+    animation: blink-cyan 1000ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+
+.blink-magenta {
+    animation: blink-magenta 1000ms infinite;
+    animation-timing-function: steps(2, jump-none);
+}
+
 .blink-red-fast {
     animation: blink-red 500ms infinite;
     animation-timing-function: steps(2, jump-none);
@@ -507,6 +522,24 @@ body {
 @keyframes blink-red {
     100% {
         background-color: red;
+    }
+}
+
+@keyframes blink-blue {
+    100% {
+        background-color: blue;
+    }
+}
+
+@keyframes blink-cyan {
+    100% {
+        background-color: cyan;
+    }
+}
+
+@keyframes blink-magenta {
+    100% {
+        background-color: magenta;
     }
 }
 
