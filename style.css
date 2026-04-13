@@ -11,7 +11,30 @@ body {
 .led-table {
     border-collapse: collapse;
     min-width: 325px;
-    width: 80vw;
+}
+
+@media (max-width: 600px) {
+    .led-table {width: 95vw;}
+}
+
+@media (min-width: 600px) {
+    .led-table {width: 95vw;}
+}
+
+@media (min-width: 768px) {
+    .led-table {width: 90vw;}
+}
+
+@media (min-width: 992px) {
+    .led-table {width: 80vw;}
+}
+
+@media (min-width: 1200px) {
+    .led-table {width: 75vw;}
+}
+
+@media (min-width: 1920px) {
+    .led-table {width: 50vw;}
 }
 
 .section-table td {

@@ -5,7 +5,7 @@ PRs are welcome for anything on this to do list
 ## Web
 
 - [ ] Add a navigation bar for the web version. Add the "hideInWebView" class to hide it in the app, as the mobile apps have their own navigation.
-- [ ] Add a service worker to allow offline use
+- [x] Add a service worker to allow offline use
 - [ ] Add a settings page so accessibility mode can be toggled. Store the settings in cookies.
 - [ ] If accessibility mode is enabled, redirect reference.html to reference-accessible.html, and vice versa. Change the link target for the reference page in the navigation bar acccordingly.
 
