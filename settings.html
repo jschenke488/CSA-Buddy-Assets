@@ -13,12 +13,12 @@
 </head>
 
 <body class="isWebView m-2">
-<!-- The isWebView class is used to determine if this is running in the mobile apps. A script removes this class if running in a regular browser. -->
+    <!-- The isWebView class is used to determine if this is running in the mobile apps. A script removes this class if running in a regular browser. -->
 
     <div class="tabs is-centered hideInWebView" id="web-navbar">
         <ul>
             <li>
-                <a href="/reference.html">
+                <a href="/reference.html" id="reference-link">
                     <span class="icon is-small"><i class="fas fa-book" aria-hidden="true"></i></span>
                     <span>Reference</span>
                 </a>
@@ -39,8 +39,12 @@
     </div>
 
     <h1 class="title is-3">Settings</h1>
-    <h2 class="subtitle is-4 mt-2">Work in Progress</h2>
-    <p>If you need accessible mode, <a href="/reference-accessible.html"">click here</a>.</p>
+    <p>Enabling accessibility mode will add descriptions on LEDs of the colors and patterns.</p>
+
+    <label class=" checkbox">
+        <input type="checkbox" id="accessible-mode-toggle">
+        Enable Accessibility Mode
+    </label>
 
 </body>
 
