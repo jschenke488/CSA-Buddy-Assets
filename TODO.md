@@ -4,7 +4,7 @@ PRs are welcome for anything on this to-do list
 
 ## Web
 
-- [ ] Add a service worker to allow offline use
+- [x] Add a service worker to allow offline use
 
 ## New Content
 

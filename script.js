@@ -31,6 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isWebView) {
         document.body.classList.remove('isWebView');
 
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').catch((err) => console.error('Service worker registration failed:', err));
+            });
+        }
+
         // Add extra padding if running in a regular web browser for the navbar.
         const webNavbar = document.getElementById('web-navbar');
         const updateNavbarSpacing = () => {

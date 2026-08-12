@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <title>CSA Buddy Settings</title>
+    <meta name="description"
+        content="Reference app for LED status, wiring diagrams, and more in FIRST Robotics Competition and FIRST Tech Challenge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bulma.min.css">
     <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
@@ -19,7 +21,7 @@
 <body class="isWebView m-2">
     <!-- The isWebView class is used to determine if this is running in the mobile apps. A script removes this class if running in a regular browser. -->
 
-    <div class="tabs is-centered hideInWebView" id="web-navbar">
+    <div class="tabs is-centered hideInWebView" id="web-navbar" role="navigation">
         <ul>
             <li>
                 <a href="/reference.html" id="reference-link">
@@ -42,13 +44,17 @@
         </ul>
     </div>
 
-    <h1 class="title is-3">Settings</h1>
+    <div role="banner">
+        <h1 class="title is-3">Settings</h1>
+    </div>
     <p>Enabling accessibility mode will add descriptions on LEDs of the colors and patterns.</p>
 
-    <label class=" checkbox">
-        <input type="checkbox" id="accessible-mode-toggle">
-        Enable Accessibility Mode
-    </label>
+    <div role="main">
+        <label class="checkbox">
+            <input type="checkbox" id="accessible-mode-toggle">
+            Enable Accessibility Mode
+        </label>
+    </div>
 
 </body>
 
