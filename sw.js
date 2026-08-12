@@ -1,5 +1,5 @@
 // Bump this on every deploy so clients pick up fresh assets.
-const CACHE_VERSION = 'csa-buddy-v205';
+const CACHE_VERSION = 'csa-buddy-sw-v1';
 
 const PRECACHE_URLS = [
     '/aboutpage.html',
@@ -31,7 +31,6 @@ const PRECACHE_URLS = [
     '/site.webmanifest',
     '/style.css',
     '/vivid-radio.jpg',
-    '/',
 ];
 
 // Confirms every precache URL actually made it into the cache, rather than
@@ -80,6 +79,11 @@ self.addEventListener('fetch', (event) => {
 
     const url = new URL(event.request.url);
     if (url.origin !== self.location.origin) return;
+
+    if (url.pathname === '/') {
+        event.respondWith(Response.redirect('/reference.html', 302));
+        return;
+    }
 
     event.respondWith(
         caches.match(event.request).then((cached) => {
