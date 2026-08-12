@@ -609,7 +609,7 @@ code {
 }
 
 .isWebView .hideInWebView {
-    display: none;
+    display: none !important;
 }
 
 #web-navbar {
