@@ -1,13 +1,10 @@
 # To Do
 
-PRs are welcome for anything on this to do list
+PRs are welcome for anything on this to-do list
 
 ## Web
 
-- [ ] Add a navigation bar for the web version. Add the "hideInWebView" class to hide it in the app, as the mobile apps have their own navigation.
 - [ ] Add a service worker to allow offline use
-- [ ] Add a settings page so accessibility mode can be toggled. Store the settings in cookies.
-- [ ] If accessibility mode is enabled, redirect reference.html to reference-accessible.html, and vice versa. Change the link target for the reference page in the navigation bar acccordingly.
 
 ## New Content
 
@@ -20,4 +17,3 @@ PRs are welcome for anything on this to do list
 ## Miscellaneous
 
 - [ ] Low priority. Split the reference page into multiple pages. For the LEDs, add a devices section with a grid layout showing each device with a picture of the device to identify it. Tap or click on a device to show the list of LEDs and potentially other useful information.
-- [x] Add version number to about page
