@@ -6,18 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About CSA Buddy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bulma.min.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="fontawesome/css/solid.min.css">
+    <script src="script.js"></script>
 </head>
 
-<body>
+<body class="isWebView m-2">
+<!-- The isWebView class is used to determine if this is running in the mobile apps. A script removes this class if running in a regular browser. -->
+
+    <div class="tabs is-centered hideInWebView" id="web-navbar">
+        <ul>
+            <li>
+                <a href="/reference.html">
+                    <span class="icon is-small"><i class="fas fa-book" aria-hidden="true"></i></span>
+                    <span>Reference</span>
+                </a>
+            </li>
+            <li>
+                <a href="/settings.html">
+                    <span class="icon is-small"><i class="fas fa-gear" aria-hidden="true"></i></span>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li class="is-active">
+                <a href="/aboutpage.html">
+                    <span class="icon is-small"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <div class="div" style="text-align: center">
-        <h1>CSA Buddy</h1>
-        <h2>Version 2.0.4</h2>
+        <h1 class="title is-3">CSA Buddy</h1>
+        <h2 class="title is-4">Version 2.0.5</h2>
         <p>Copyright 2026</p>
         <p>Jay Schenke & Ken Schenke</p>
     </div>
 
-    <h2>
+    <h2 class="title is-4 mt-4">
         Special Thanks
     </h2>
     <ul>
@@ -26,13 +54,13 @@
         <li><i>FIRST</i> in Michigan (<a href="https://firstinmichigan.us">firstinmichigan.us</a>)</li>
     </ul>
 
-    <h2>Sources</h2>
+    <h2 class="title is-4 mt-4">Sources</h2>
     <p>Android: <a href="https://github.com/jschenke488/CSA-Buddy-Android">github.com/jschenke488/CSA-Buddy-Android</a>
     </p>
     <p>iOS: <a href="https://github.com/jschenke488/CSA-Buddy-iOS">github.com/jschenke488/CSA-Buddy-iOS</a></p>
     <p>Assets: <a href="https://github.com/jschenke488/CSA-Buddy-Assets">github.com/jschenke488/CSA-Buddy-Assets</a></p>
 
-    <h2>Attribution</h2>
+    <h2 class="title is-4 mt-4">Attribution</h2>
     <ul>
         <li>"FRC Basic Wiring Diagram" by FRC® Team 3161 and Stefen Acepcion, source at
             <a href="https://github.com/stefacep/2025-FRC-Control-System-Diagrams">https://github.com/stefacep/2025-FRC-Control-System-Diagrams</a>, licensed under CC BY 4.0
@@ -62,11 +90,11 @@
             (<a href="https://spdx.org/licenses/MIT.html">https://spdx.org/licenses/MIT.html</a>). No changes were made.</li>
     </ul>
 
-    <h2>License</h2>
+    <h2 class="title is-4 mt-4">License</h2>
 
-    <p>MIT License</p>
+    <p>MIT License</p><br>
 
-    <p>Copyright (c) 2026 Jay Schenke & Ken Schenke</p>
+    <p>Copyright (c) 2026 Jay Schenke & Ken Schenke</p><br>
 
     <p>
         Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -75,12 +103,12 @@
         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
         copies of the Software, and to permit persons to whom the Software is
         furnished to do so, subject to the following conditions:
-    </p>
+    </p><br>
 
     <p>
         The above copyright notice and this permission notice shall be included in all
         copies or substantial portions of the Software.
-    </p>
+    </p><br>
 
     <p>
         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
@@ -90,7 +118,7 @@
         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
         SOFTWARE.
-    </p>
+    </p><br>
 
 </body>
 

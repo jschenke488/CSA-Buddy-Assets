@@ -5,5 +5,13 @@ const isWebView = /CSABuddy/.test(navigator.userAgent);
 document.addEventListener('DOMContentLoaded', () => {
     if (!isWebView) {
         document.body.classList.remove('isWebView');
+
+        // Add extra padding if running in a regular web browser for the navbar.
+        const webNavbar = document.getElementById('web-navbar');
+        const updateNavbarSpacing = () => {
+            document.body.style.paddingBottom = `${webNavbar.offsetHeight + 10}px`;
+        };
+        updateNavbarSpacing();
+        window.addEventListener('resize', updateNavbarSpacing);
     }
 });
