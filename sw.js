@@ -34,11 +34,34 @@ const PRECACHE_URLS = [
     '/',
 ];
 
+// Confirms every precache URL actually made it into the cache, rather than
+// trusting that cache.addAll() resolving means all of them succeeded.
+async function isFullyCached() {
+    const cache = await caches.open(CACHE_VERSION);
+    const matches = await Promise.all(PRECACHE_URLS.map((url) => cache.match(url)));
+    return matches.every(Boolean);
+}
+
+async function notifyClients(ready) {
+    const clients = await self.clients.matchAll();
+    clients.forEach((client) => client.postMessage({ type: 'OFFLINE_STATUS', ready }));
+}
+
 self.addEventListener('install', (event) => {
     event.waitUntil(
-        caches.open(CACHE_VERSION).then((cache) => cache.addAll(PRECACHE_URLS))
+        caches.open(CACHE_VERSION)
+            .then((cache) => cache.addAll(PRECACHE_URLS))
+            .catch((err) => console.error('Precaching failed:', err))
+            .then(() => isFullyCached())
+            .then((ready) => notifyClients(ready))
     );
     self.skipWaiting();
+});
+
+self.addEventListener('message', (event) => {
+    if (event.data && event.data.type === 'CHECK_OFFLINE_STATUS') {
+        isFullyCached().then((ready) => event.source.postMessage({ type: 'OFFLINE_STATUS', ready }));
+    }
 });
 
 self.addEventListener('activate', (event) => {

@@ -13,6 +13,23 @@ function setCookie(name, value) {
     document.cookie = `${name}=${value}; expires=${expires}; path=/; SameSite=Lax`;
 }
 
+function setOfflineStatus(ready) {
+    const statusTag = document.getElementById('offline-status');
+    const errorBox = document.getElementById('offline-error');
+    if (!statusTag) return;
+
+    if (ready) {
+        statusTag.textContent = 'offline ready';
+        statusTag.classList.remove('is-warning', 'is-danger');
+        statusTag.classList.add('is-success');
+        if (errorBox) errorBox.classList.add('is-hidden');
+    } else {
+        statusTag.classList.remove('is-warning');
+        statusTag.classList.add('is-danger');
+        if (errorBox) errorBox.classList.remove('is-hidden');
+    }
+}
+
 function accessibilityRedirect() {
     const referenceTabLink = document.getElementById('reference-link');
     if (getCookie(ACCESSIBLE_MODE_COOKIE) === 'true') {
@@ -32,9 +49,21 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('isWebView');
 
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js').catch((err) => console.error('Service worker registration failed:', err));
+            navigator.serviceWorker.addEventListener('message', (event) => {
+                if (event.data && event.data.type === 'OFFLINE_STATUS') setOfflineStatus(event.data.ready);
             });
+
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(() => navigator.serviceWorker.ready)
+                    .then((registration) => registration.active.postMessage({ type: 'CHECK_OFFLINE_STATUS' }))
+                    .catch((err) => {
+                        console.error('Service worker registration failed:', err);
+                        setOfflineStatus(false);
+                    });
+            });
+        } else {
+            setOfflineStatus(false);
         }
 
         // Add extra padding if running in a regular web browser for the navbar.

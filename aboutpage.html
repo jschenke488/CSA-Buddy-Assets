@@ -15,6 +15,17 @@
     <link rel="stylesheet" href="bulma.min.css">
     <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="fontawesome/css/solid.min.css">
+    <style>
+        li {
+            overflow-wrap: break-word;
+        }
+
+        @media screen and (max-width: 616px) {
+            .badge {
+                display: block !important;
+            }
+        }
+    </style>
     <script src="script.js"></script>
 </head>
 
@@ -49,6 +60,17 @@
         <h2 class="title is-4">Version 2.0.5</h2>
         <p>Copyright 2026</p>
         <p>Jay Schenke & Ken Schenke</p>
+        <div class="container is-max-tablet hideInWebView">
+            <span class="tag is-warning" id="offline-status">not offline ready</span>
+            <article class="message is-danger is-hidden my-4" id="offline-error">
+                <div class="message-header">
+                    <p>Error</p>
+                </div>
+                <div class="message-body">
+                    Unable to download web app for offline use
+                </div>
+            </article>
+        </div>
     </div>
 
     <div role="main">
@@ -57,31 +79,37 @@
                 Downloads
             </h2>
 
-            <a class="mx-2" target="_blank" href="https://apps.apple.com/us/app/csa-buddy/id6760242077?itscg=30200&itsct=apps_box_badge&mttnsubad=6760242077"
-                style="display: inline-block;">
-                <img src="badges/apple.svg"
-                    alt="Download on the App Store"
+            <h2 class="title is-5 mt-4 mb-4">
+                Apple
+            </h2>
+
+            <a class="mx-2 badge" target="_blank"
+                href="https://apps.apple.com/us/app/csa-buddy/id6760242077?itscg=30200&itsct=apps_box_badge&mttnsubad=6760242077"
+                style="display: inline;">
+                <img src="badges/apple.svg" alt="Download on the App Store"
                     style="width: 162px; height: 54px; vertical-align: middle; object-fit: contain;" />
             </a>
-            
-            <a class="mx-2" target="_blank" href="https://github.com/jschenke488/CSA-Buddy-Android/releases"
+
+            <h2 class="title is-5 mt-4 mb-0">
+                Android
+            </h2>
+
+            <a class="mx-2 mt-0 badge" target="_blank" href="https://github.com/jschenke488/CSA-Buddy-Android/releases"
                 style="display: inline;">
-                <img src="badges/github.png"
-                    alt="Get it on GitHub"
+                <img src="badges/github.png" alt="Get it on GitHub"
                     style="width: 181px; height: 82px; vertical-align: middle; object-fit: contain;" />
             </a>
 
-            <a class="mx-2" target="_blank" href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.kenschenke.csabuddy%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fjschenke488%2FCSA-Buddy-Android%22%2C%22author%22%3A%22Jay%20Schenke%20%26%20Ken%20Schenke%22%2C%22name%22%3A%22CSA%20Buddy%22%2C%22additionalSettings%22%3A%22%7B%5C%22versionExtractionRegEx%5C%22%3A%5C%22v(.*)%5C%22%2C%5C%22matchGroupToUse%5C%22%3A%5C%22%241%5C%22%2C%5C%22appName%5C%22%3A%5C%22CSA%20Buddy%5C%22%2C%5C%22appAuthor%5C%22%3A%5C%22Jay%20Schenke%20%26%20Ken%20Schenke%5C%22%2C%5C%22about%5C%22%3A%5C%22This%20app%20is%20for%20teams%20and%20volunteers%20at%20FIRST%20Robotics%20Competition%20(FRC)%20and%20FIRST%20Tech%20Challenge%20(FTC)%20events%2C%20designed%20primarily%20for%20CSA%20(Control%20System%20Advisor)%20volunteers.%20It%27s%20a%20small%20app%20that%20shows%20a%20quick%20reference%20page%20with%20some%20helpful%20technical%20tidbits.%5C%22%7D%22%7D"
+            <a class="mx-2 badge" target="_blank"
+                href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.kenschenke.csabuddy%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fjschenke488%2FCSA-Buddy-Android%22%2C%22author%22%3A%22Jay%20Schenke%20%26%20Ken%20Schenke%22%2C%22name%22%3A%22CSA%20Buddy%22%2C%22additionalSettings%22%3A%22%7B%5C%22versionExtractionRegEx%5C%22%3A%5C%22v(.*)%5C%22%2C%5C%22matchGroupToUse%5C%22%3A%5C%22%241%5C%22%2C%5C%22appName%5C%22%3A%5C%22CSA%20Buddy%5C%22%2C%5C%22appAuthor%5C%22%3A%5C%22Jay%20Schenke%20%26%20Ken%20Schenke%5C%22%2C%5C%22about%5C%22%3A%5C%22This%20app%20is%20for%20teams%20and%20volunteers%20at%20FIRST%20Robotics%20Competition%20(FRC)%20and%20FIRST%20Tech%20Challenge%20(FTC)%20events%2C%20designed%20primarily%20for%20CSA%20(Control%20System%20Advisor)%20volunteers.%20It%27s%20a%20small%20app%20that%20shows%20a%20quick%20reference%20page%20with%20some%20helpful%20technical%20tidbits.%5C%22%7D%22%7D"
                 style="display: inline;">
-                <img src="badges/obtainium.png"
-                    alt="Get it on Obtainium"
+                <img src="badges/obtainium.png" alt="Get it on Obtainium"
                     style="width: 181px; height: 82px; vertical-align: middle; object-fit: contain;" />
             </a>
 
-            <a class="mx-2" target="_blank" href="https://play.google.com/store/apps/details?id=com.kenschenke.csabuddy"
+            <a class="mx-2 badge" target="_blank" href="https://play.google.com/store/apps/details?id=com.kenschenke.csabuddy"
                 style="display: inline;">
-                <img src="badges/google-play.png"
-                    alt="Get it on Google Play"
+                <img src="badges/google-play.png" alt="Get it on Google Play"
                     style="width: 181px; height: 82px; vertical-align: middle; object-fit: contain;" />
             </a>
         </div>
