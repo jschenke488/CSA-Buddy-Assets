@@ -8,10 +8,6 @@ ul {
     list-style: inside !important;
 }
 
-details summary {
-    cursor: pointer;
-}
-
 .led-table td {
     border: 2px solid #B0BEC5;
 }
@@ -603,6 +599,7 @@ details summary {
 
 summary {
     font-size: 24px;
+    cursor: pointer;
 }
 
 code {
