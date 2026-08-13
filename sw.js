@@ -1,5 +1,5 @@
 // Bump this on every deploy so clients pick up fresh assets.
-const CACHE_VERSION = 'csa-buddy-sw-v4';
+const CACHE_VERSION = 'csa-buddy-sw-v5';
 
 const PRECACHE_URLS = [
     '/aboutpage.html',

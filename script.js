@@ -48,7 +48,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isWebView) {
         document.body.classList.remove('isWebView');
 
-        if ('serviceWorker' in navigator) {
+        // Register service worker to allow offline access. Skip registration if browser doesn't support service workers, or if running locally.
+        const localHostnames = ['localhost', '127.0.0.1', '[::1]']
+        const isLocal = localHostnames.includes(window.location.hostname.toLowerCase()) || window.location.hostname.toLowerCase().endsWith('.local')
+        if (isLocal) {
+            const errorBox = document.getElementById('offline-error');
+            const statusTag = document.getElementById('offline-status');
+            if (!statusTag) return;
+            
+            statusTag.textContent = 'development server';
+            statusTag.classList.remove('is-warning', 'is-danger');
+            statusTag.classList.add('is-info');
+            if (errorBox) errorBox.classList.add('is-hidden');
+        } else if ('serviceWorker' in navigator) {
             navigator.serviceWorker.addEventListener('message', (event) => {
                 if (event.data && event.data.type === 'OFFLINE_STATUS') setOfflineStatus(event.data.ready);
             });
