@@ -204,3 +204,5 @@ Backups.backupdb
 MobileBackups.trash
 tmbootpicker.efi
 .vscode/
+
+.idea/
