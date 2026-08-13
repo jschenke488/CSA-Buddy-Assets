@@ -1,5 +1,5 @@
 // Bump this on every deploy so clients pick up fresh assets.
-const CACHE_VERSION = 'csa-buddy-sw-v6'
+const CACHE_VERSION = 'csa-buddy-sw-v7'
 
 const PRECACHE_URLS = [
     '/aboutpage.html',
@@ -69,7 +69,7 @@ self.addEventListener('activate', (event) => {
             Promise.all(keys.filter((key) => key !== CACHE_VERSION).map((key) => caches.delete(key)))
         )
     )
-    self.clients.claim()
+    self.clients.claim().then(_ => {})
 })
 
 // Cache-first, falling back to network. Successful network responses are
