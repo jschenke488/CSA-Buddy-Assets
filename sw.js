@@ -1,5 +1,5 @@
 // Bump this on every deploy so clients pick up fresh assets.
-const CACHE_VERSION = 'csa-buddy-sw-v5';
+const CACHE_VERSION = 'csa-buddy-sw-v6'
 
 const PRECACHE_URLS = [
     '/aboutpage.html',
@@ -30,20 +30,20 @@ const PRECACHE_URLS = [
     '/settings.html',
     '/site.webmanifest',
     '/style.css',
-    '/vivid-radio.jpg',
-];
+    '/vivid-radio.jpg'
+]
 
 // Confirms every precache URL actually made it into the cache, rather than
 // trusting that cache.addAll() resolving means all of them succeeded.
 async function isFullyCached() {
-    const cache = await caches.open(CACHE_VERSION);
-    const matches = await Promise.all(PRECACHE_URLS.map((url) => cache.match(url)));
-    return matches.every(Boolean);
+    const cache = await caches.open(CACHE_VERSION)
+    const matches = await Promise.all(PRECACHE_URLS.map((url) => cache.match(url)))
+    return matches.every(Boolean)
 }
 
 async function notifyClients(ready) {
-    const clients = await self.clients.matchAll();
-    clients.forEach((client) => client.postMessage({ type: 'OFFLINE_STATUS', ready }));
+    const clients = await self.clients.matchAll()
+    clients.forEach((client) => client.postMessage({type: 'OFFLINE_STATUS', ready}))
 }
 
 self.addEventListener('install', (event) => {
@@ -53,51 +53,51 @@ self.addEventListener('install', (event) => {
             .catch((err) => console.error('Precaching failed:', err))
             .then(() => isFullyCached())
             .then((ready) => notifyClients(ready))
-    );
-    self.skipWaiting();
-});
+    )
+    self.skipWaiting()
+})
 
 self.addEventListener('message', (event) => {
     if (event.data && event.data.type === 'CHECK_OFFLINE_STATUS') {
-        isFullyCached().then((ready) => event.source.postMessage({ type: 'OFFLINE_STATUS', ready }));
+        isFullyCached().then((ready) => event.source.postMessage({type: 'OFFLINE_STATUS', ready}))
     }
-});
+})
 
 self.addEventListener('activate', (event) => {
     event.waitUntil(
         caches.keys().then((keys) =>
             Promise.all(keys.filter((key) => key !== CACHE_VERSION).map((key) => caches.delete(key)))
         )
-    );
-    self.clients.claim();
-});
+    )
+    self.clients.claim()
+})
 
 // Cache-first, falling back to network. Successful network responses are
 // stored so the next offline visit has them too.
 self.addEventListener('fetch', (event) => {
-    if (event.request.method !== 'GET') return;
+    if (event.request.method !== 'GET') return
 
-    const url = new URL(event.request.url);
-    if (url.origin !== self.location.origin) return;
+    const url = new URL(event.request.url)
+    if (url.origin !== self.location.origin) return
 
     if (url.pathname === '/') {
-        event.respondWith(Response.redirect('/reference.html', 302));
-        return;
+        event.respondWith(Response.redirect('/reference.html', 302))
+        return
     }
 
     event.respondWith(
         caches.match(event.request).then((cached) => {
-            if (cached) return cached;
+            if (cached) return cached
 
             return fetch(event.request).then((response) => {
                 if (response.ok) {
-                    const responseClone = response.clone();
-                    caches.open(CACHE_VERSION).then((cache) => cache.put(event.request, responseClone));
+                    const responseClone = response.clone()
+                    caches.open(CACHE_VERSION).then((cache) => cache.put(event.request, responseClone))
                 }
-                return response;
+                return response
             }).catch(() => {
-                if (event.request.mode === 'navigate') return caches.match('/reference.html');
-            });
+                if (event.request.mode === 'navigate') return caches.match('/reference.html')
+            })
         })
-    );
-});
+    )
+})

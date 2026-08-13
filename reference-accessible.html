@@ -10,7 +10,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <title>CSA Buddy Reference</title>
     <meta name="description"
-        content="Reference app for LED status, wiring diagrams, and more in FIRST Robotics Competition and FIRST Tech Challenge">
+          content="Reference app for LED status, wiring diagrams, and more in FIRST Robotics Competition and FIRST Tech Challenge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bulma.min.css">
     <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
@@ -19,1856 +19,1860 @@
 </head>
 
 <body class="isWebView m-2">
-    <!-- The isWebView class is used to determine if this is running in the mobile apps. A script removes this class if running in a regular browser. -->
+<!-- The isWebView class is used to determine if this is running in the mobile apps. A script removes this class if running in a regular browser. -->
 
-    <div class="tabs is-centered hideInWebView" id="web-navbar" role="navigation">
+<div class="tabs is-centered hideInWebView" id="web-navbar" role="navigation">
+    <ul>
+        <li class="is-active">
+            <a href="/reference.html" id="reference-link">
+                <span class="icon is-small"><i class="fas fa-book" aria-hidden="true"></i></span>
+                <span>Reference</span>
+            </a>
+        </li>
+        <li>
+            <a href="/settings.html">
+                <span class="icon is-small"><i class="fas fa-gear" aria-hidden="true"></i></span>
+                <span>Settings</span>
+            </a>
+        </li>
+        <li>
+            <a href="/aboutpage.html">
+                <span class="icon is-small"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+                <span>About</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div role="banner">
+    <h1 class="title is-3">CSA/FTA(A)/Team Reference</h1>
+</div>
+
+<div role="main">
+    <details>
+        <summary>Robot Radio Lights</summary>
+
+        <img src="vivid-radio.jpg" width="225px">
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table">
+                        <tr>
+                            <td colspan="3" class="bold">Robot Radio, No Link to Field AP</td>
+                        </tr>
+                        <tr>
+                            <td>PWR</td>
+                            <td>
+                                <div class="green vivid-led"></div>
+                            </td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td>SYS</td>
+                            <td>
+                                <div class="green blink vivid-led"></div>
+                            </td>
+                            <td><i>Green Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td>2.4G</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td>6G</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td>Rio</td>
+                            <td class="green vivid-led"></td>
+                            <td><i>Green</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table">
+                        <tr>
+                            <td colspan="3" class="bold">Robot Radio, No Link to Field AP, Programmed using WPA
+                                Kiosk
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>PWR</td>
+                            <td>
+                                <div class="green vivid-led"></div>
+                            </td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td>SYS</td>
+                            <td>
+                                <div class="green double-blink-green vivid-led"></div>
+                            </td>
+                            <td><i>Green, Blink/Blink/Pause (.._.._) pattern</i></td>
+                        </tr>
+                        <tr>
+                            <td>2.4G</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td>6G</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td>Rio</td>
+                            <td class="green vivid-led"></td>
+                            <td><i>Green</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table">
+                        <tr>
+                            <td colspan="3" class="bold">Robot Radio, Linked to Field AP</td>
+                        </tr>
+                        <tr>
+                            <td>PWR</td>
+                            <td class="green vivid-led"></td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td>SYS</td>
+                            <td class="green vivid-led"></td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td>2.4G</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td>6G</td>
+                            <td class="blue vivid-led"></td>
+                            <td><i>Blue</i></td>
+                        </tr>
+                        <tr>
+                            <td>Rio</td>
+                            <td class="green vivid-led"></td>
+                            <td><i>Green</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table">
+                        <tr>
+                            <td colspan="3" class="bold">AP Mode <span style="color:red">Look Out For</span></td>
+                        </tr>
+                        <tr>
+                            <td>PWR</td>
+                            <td>
+                                <div class="green vivid-led"></div>
+                            </td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td>SYS</td>
+                            <td>
+                                <div class="green vivid-led"></div>
+                            </td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td>2.4G</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td>6G</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td>Rio</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="bold">ERROR STATES (stuck for &gt;30 seconds)</td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="section-table">
+                        <tr>
+                            <td colspan="3" class="bold">Internal Damage (Contact Vivid for RMA)</td>
+                        </tr>
+                        <tr>
+                            <td>PWR</td>
+                            <td>
+                                <div class="green vivid-led"></div>
+                            </td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td>SYS</td>
+                            <td>
+                                <div class="green vivid-led"></div>
+                            </td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td>2.4G</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td>6G</td>
+                            <td class="blue vivid-led"></td>
+                            <td><i>Blue</i></td>
+                        </tr>
+                        <tr>
+                            <td>Rio</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="section-table">
+                        <tr>
+                            <td colspan="3" class="bold">Stuck in Bootloader (Contact Vivid for RMA)</td>
+                        </tr>
+                        <tr>
+                            <td>PWR</td>
+                            <td>
+                                <div class="green vivid-led"></div>
+                            </td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td>SYS</td>
+                            <td>
+                                <div class="green vivid-led"></div>
+                            </td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td>2.4G</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td>6G</td>
+                            <td class="blue vivid-led"></td>
+                            <td><i>Blue</i></td>
+                        </tr>
+                        <tr>
+                            <td>Rio</td>
+                            <td class="green vivid-led"></td>
+                            <td><i>Green</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="section-table">
+                        <tr>
+                            <td colspan="3" class="bold">Corrupted Flash (Contact Vivid for RMA)</td>
+                        </tr>
+                        <tr>
+                            <td>PWR</td>
+                            <td>
+                                <div class="green vivid-led"></div>
+                            </td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td>SYS</td>
+                            <td>
+                                <div class="black vivid-led"></div>
+                            </td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td>2.4G</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td>6G</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td>Rio</td>
+                            <td class="green vivid-led"></td>
+                            <td><i>Green</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="section-table">
+                        <tr>
+                            <td colspan="3" class="bold">Partially Corrupted Flash (Contact Vivid for remote
+                                recovery)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>PWR</td>
+                            <td>
+                                <div class="green vivid-led"></div>
+                            </td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td>SYS</td>
+                            <td>
+                                <div class="blink-green-50hz vivid-led"></div>
+                            </td>
+                            <td><i>Green 50Hz</i></td>
+                        </tr>
+                        <tr>
+                            <td>2.4G</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td>6G</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td>Rio</td>
+                            <td class="black vivid-led"></td>
+                            <td><i>Off</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <details>
+        <summary>RoboRIO Lights</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">Power</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="green led"></td>
+                            <td>OK</td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange led"></td>
+                            <td>Brownout</td>
+                            <td><i>Orange</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red led"></td>
+                            <td>Fault, check for short</td>
+                            <td><i>Red</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">Status</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>OK</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange led"></td>
+                            <td>Booting</td>
+                            <td><i>Orange</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange blink led"></td>
+                            <td>Unrecoverable error</td>
+                            <td><i>Orange Blink</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">Radio</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>Ignore</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">Comm</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>No Comms</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink led"></td>
+                            <td>Comms, no code</td>
+                            <td><i>Red Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red led"></td>
+                            <td>E-Stop</td>
+                            <td><i>Red</i></td>
+                        </tr>
+                        <tr>
+                            <td class="green led"></td>
+                            <td>OK</td>
+                            <td><i>Green</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">Mode</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>Disabled</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange led"></td>
+                            <td>Auto</td>
+                            <td><i>Orange</i></td>
+                        </tr>
+                        <tr>
+                            <td class="green led"></td>
+                            <td>Teleop</td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red led"></td>
+                            <td>Test</td>
+                            <td><i>Red</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <details>
+        <summary>SystemCore Lights</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">Power</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="green led"></td>
+                            <td>Normal Operation</td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>No power / Reverse Polarity</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">Mode</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="orange led"></td>
+                            <td>Robot On and Disabled</td>
+                            <td><i>Orange</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange blink led"></td>
+                            <td>Robot On and Enabled</td>
+                            <td><i>Orange Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>RT Subsystem disabled</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">Status</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="red led"></td>
+                            <td>Uncleared hardware fault;</td>
+                            <td><i>Red</i></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Brownout protection enabled*</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="red slow led"></td>
+                            <td>Display hardware fault</td>
+                            <td><i>Red Slow Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red fast led"></td>
+                            <td>CAN Bus Fault</td>
+                            <td><i>Red Fast Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>No faults</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">*Brownout protection disables PWM and digital outputs.</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <br>
+
+    <details>
+        <summary>REV Power Distribution Lights</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="3" class="bold">General Status</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="blue led"></td>
+                            <td>Device on but no communication established</td>
+                            <td><i>Blue</i></td>
+                        </tr>
+                        <tr>
+                            <td class="lightGreen led"></td>
+                            <td>Main communication with robot controller established</td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td class="magenta blink led"></td>
+                            <td>Keep alive timeout</td>
+                            <td><i>Magenta Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="cyan led"></td>
+                            <td>Secondary heartbeat (connected to REV Hardware Client)</td>
+                            <td><i>Cyan</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange blink-blue led"></td>
+                            <td>Low battery</td>
+                            <td><i>Orange / Blue Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange blink-yellow led"></td>
+                            <td>CAN fault</td>
+                            <td><i>Orange / Yellow Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange blink-cyan led"></td>
+                            <td>Hardware fault</td>
+                            <td><i>Orange / Cyan Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange blink-magenta led"></td>
+                            <td>Device over current</td>
+                            <td><i>Orange / Magenta Alternating</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="3" class="bold">Channel Status</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>Channel has voltage and is operating as expected</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red led"></td>
+                            <td>Channel has NO voltage and there is an active fault. Check for tripped or missing
+                                circuit breaker.
+                            </td>
+                            <td><i>Red</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink led"></td>
+                            <td>Sticky fault on the channel. Check for tripped circuit breaker.</td>
+                            <td><i>Red Blink</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="3" class="bold">Switched Channel</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>Channel has voltage and is operating as expected</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red led"></td>
+                            <td>Channel has NO voltage and there is an active fault. Check for blown or missing
+                                fuse.
+                            </td>
+                            <td><i>Red</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink led"></td>
+                            <td>Sticky fault on the channel. Check for blown fuse.</td>
+                            <td><i>Red Blink</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <details>
+        <summary>REV Motor Controller Lights</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">Brushed Mode</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="blue blink led"></td>
+                            <td>Brake No Signal</td>
+                            <td><i>Blue Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="blue led"></td>
+                            <td>Brake Valid Signal</td>
+                            <td><i>Blue</i></td>
+                        </tr>
+                        <tr>
+                            <td class="yellow blink led"></td>
+                            <td>Coast No Signal</td>
+                            <td><i>Yellow Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="yellow led"></td>
+                            <td>Coast Valid Signal</td>
+                            <td><i>Yellow</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">Brushless Mode</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="cyan blink led"></td>
+                            <td>Brake No Signal</td>
+                            <td><i>Cyan Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="cyan led"></td>
+                            <td>Brake Valid Signal</td>
+                            <td><i>Cyan</i></td>
+                        </tr>
+                        <tr>
+                            <td class="magenta blink led"></td>
+                            <td>Coast No Signal</td>
+                            <td><i>Magenta Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="magenta led"></td>
+                            <td>Coast Valid Signal</td>
+                            <td><i>Magenta</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">Movement</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="lightGreen fast led"></td>
+                            <td>Partial Forward</td>
+                            <td><i>Green Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="lightGreen led"></td>
+                            <td>Full Forward</td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red fast led"></td>
+                            <td>Partial Reverse</td>
+                            <td><i>Red Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red led"></td>
+                            <td>Full Reverse</td>
+                            <td><i>Red</i></td>
+                        </tr>
+                        <tr>
+                            <td class="lightGreen blink-white led"></td>
+                            <td>Forward Limit</td>
+                            <td><i>Green / White Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink-white led"></td>
+                            <td>Reverse Limit</td>
+                            <td><i>Red / White Alternating</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">Identification, Updating, and Recovery</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="magenta blink-white-fast250 led"></td>
+                            <td>Identify</td>
+                            <td><i>Magenta / White Fast Alternating (4 Hz)</i></td>
+                        </tr>
+                        <tr>
+                            <td class="yellow slow-white led"></td>
+                            <td>CAN Firmware Updating</td>
+                            <td><i>Yellow / White Slow Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="blue slow-white led"></td>
+                            <td>CAN Firmware Retry</td>
+                            <td><i>Blue / White Slow Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>USB Device Firmware Update</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>Recovery Mode</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">Fault Conditions</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="blue slow-orange led"></td>
+                            <td>12V Missing</td>
+                            <td><i>Blue / Orange Slow Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="magenta slow-orange led"></td>
+                            <td>Sensor Fault</td>
+                            <td><i>Magenta / Orange Slow Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="cyan slow-orange led"></td>
+                            <td>Gate Driver Fault</td>
+                            <td><i>Cyan / Orange Slow Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="yellow slow-orange led"></td>
+                            <td>CAN Fault</td>
+                            <td><i>Yellow / Orange Slow Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="lightGreen slow-orange led"></td>
+                            <td>Temperature Cutoff Fault (SPARK Flex only)</td>
+                            <td><i>Green / Orange Slow Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>Corrupt Firmware</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <br>
+
+    <details>
+        <summary>CTRE Power Distribution Lights</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="3" class="bold">COMM / STAT</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="green fast led"></td>
+                            <td class="green fast led"></td>
+                            <td>Robot is enabled</td>
+                            <td><i>Green Fast Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="green slow led"></td>
+                            <td class="green slow led"></td>
+                            <td>Robot is disabled</td>
+                            <td><i>Green Slow Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange slow led"></td>
+                            <td class="orange slow led"></td>
+                            <td>Robot is disabled. Sticky fault present.</td>
+                            <td><i>Orange Slow Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red slow led"></td>
+                            <td class="red slow led"></td>
+                            <td>No CAN bus</td>
+                            <td><i>Red Slow Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="green blink-orange led"></td>
+                            <td class="black led"></td>
+                            <td>Device is in bootloader. Field-upgrade necessary.</td>
+                            <td><i>Green / Orange Alternating Blink (COMM only)</i></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td class="black led"></td>
+                            <td>Device is NOT powered</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <details>
+        <summary>CTRE Motor Controller Lights</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="3" class="bold">Disabled Codes</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td class="black led"></td>
+                            <td>No Power</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink led"></td>
+                            <td class="black blink-red led"></td>
+                            <td>CAN bus/PWM is not detected</td>
+                            <td><i>Red Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange blink led"></td>
+                            <td class="black blink-orange led"></td>
+                            <td>CAN bus detected, Phoenix not running on robot</td>
+                            <td><i>Orange Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange blink led"></td>
+                            <td class="orange blink led"></td>
+                            <td>CAN bus detected, robot disabled</td>
+                            <td><i>Orange Simultaneous Blink</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="3" class="bold">Enabled Codes</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="orange led"></td>
+                            <td class="orange led"></td>
+                            <td>Enabled, no output</td>
+                            <td><i>Orange</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink led"></td>
+                            <td class="red blink led"></td>
+                            <td>Reverse Movement</td>
+                            <td><i>Red Simultaneous Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="green blink led"></td>
+                            <td class="green blink led"></td>
+                            <td>Forward Movement</td>
+                            <td><i>Green Simultaneous Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="offset-red-a led"></td>
+                            <td class="offset-red-b led"></td>
+                            <td>Limit hit. Direction of blink indicates forward/reverse.</td>
+                            <td><i>Red Alternating Blink Followed by Off</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="3" class="bold">Special Codes</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="offset-orange-a led"></td>
+                            <td class="offset-orange-b led"></td>
+                            <td>Thermal Shutoff</td>
+                            <td><i>Orange Alternating Blink Followed by Off</i></td>
+                        </tr>
+                        <tr>
+                            <td class="green blink-red led"></td>
+                            <td class="red blink-green led"></td>
+                            <td>Unlicensed Phoenix Pro</td>
+                            <td><i>Red / Green Alternating Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink-orange led"></td>
+                            <td class="orange blink-red led"></td>
+                            <td>Hardware Damage</td>
+                            <td><i>Red / Orange Alternating Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td class="green blink-orange led"></td>
+                            <td>Bootloader</td>
+                            <td><i>Red / Orange Alternating Blink, Right Side Only</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <details>
+        <summary>CTRE CANivore Lights</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">STAT</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>No Power</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td class="double-blink-red led"></td>
+                            <td>Powered but USB not plugged in</td>
+                            <td><i>Red Double Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="fast-strobe-red led"></td>
+                            <td>USB plugged in but no comms</td>
+                            <td><i>Red Fast Strobe</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange double-blink-orange led"></td>
+                            <td>CAN disabled, no power</td>
+                            <td><i>Orange Double Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="fast-strobe-orange led"></td>
+                            <td>CAN disabled</td>
+                            <td><i>Orange Fast Strobe</i></td>
+                        </tr>
+                        <tr>
+                            <td class="green double-blink-green led"></td>
+                            <td>CAN enabled, no power</td>
+                            <td><i>Green Double Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="fast-strobe-green led"></td>
+                            <td>CAN enabled</td>
+                            <td><i>Green Fast Strobe</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink-orange-fast led"></td>
+                            <td>Hardware Damage</td>
+                            <td><i>Red / Orange Fast Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="green blink-orange-fast led"></td>
+                            <td>Bootloader</td>
+                            <td><i>Green / Orange Fast Alternating</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">WIFI</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="green fast led"></td>
+                            <td>Wi-Fi Enabled</td>
+                            <td><i>Green Fast Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>Wi-Fi Disabled</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">BT</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="green fast led"></td>
+                            <td>Bluetooth Enabled</td>
+                            <td><i>Green Fast Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>Bluetooth Disabled</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">CAN (double blink = termination disabled)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="red led"></td>
+                            <td>Voltage too low for CAN bus</td>
+                            <td><i>Red</i></td>
+                        </tr>
+                        <tr>
+                            <td class="fast-strobe-red led"></td>
+                            <td>No CAN comms</td>
+                            <td><i>Red Fast Strobe</i></td>
+                        </tr>
+                        <tr>
+                            <td class="fast-strobe-orange led"></td>
+                            <td>CAN 2.0b legacy mode</td>
+                            <td><i>Orange Fast Strobe</i></td>
+                        </tr>
+                        <tr>
+                            <td class="fast-strobe-green led"></td>
+                            <td>CAN FD Active</td>
+                            <td><i>Green Fast Strobe</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <details>
+        <summary>CTRE CANcoder Lights</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">(dim = no CAN)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>No Power</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink led"></td>
+                            <td>CAN bus lost</td>
+                            <td><i>Red Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="fast-strobe-red led"></td>
+                            <td>Magnet is out of range (&lt;25mT or &gt;135mT)</td>
+                            <td><i>Red Fast Strobe</i></td>
+                        </tr>
+                        <tr>
+                            <td class="fast-strobe-orange led"></td>
+                            <td>Magnet in range with <i>slightly</i> reduced accuracy (25-45mT or 75-135mT)</td>
+                            <td><i>Orange Fast Strobe</i></td>
+                        </tr>
+                        <tr>
+                            <td class="fast-strobe-green led"></td>
+                            <td>Magnet in range (between 45mT-75mT)</td>
+                            <td><i>Green Fast Strobe</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink-orange led"></td>
+                            <td>Hardware Damage</td>
+                            <td><i>Red / Orange Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="green blink-orange led"></td>
+                            <td>Bootloader</td>
+                            <td><i>Green / Orange Alternating</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <details>
+        <summary>CTRE Pigeon Lights</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td class="black led"></td>
+                            <td class="black led"></td>
+                            <td>No Power</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink led"></td>
+                            <td class="black blink-red led"></td>
+                            <td>No CAN bus detected</td>
+                            <td><i>Red Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="black blink-orange led"></td>
+                            <td class="orange blink-black led"></td>
+                            <td>CAN bus detected, Phoenix not running on robot</td>
+                            <td><i>Orange Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange blink led"></td>
+                            <td class="orange blink led"></td>
+                            <td>CAN bus detected. Robot disabled.</td>
+                            <td><i>Orange Simultaneous Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="green blink led"></td>
+                            <td class="black blink-green led"></td>
+                            <td>CAN bus detected. Robot enabled.</td>
+                            <td><i>Green Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink-orange led"></td>
+                            <td class="orange blink-red led"></td>
+                            <td>Hardware Damage</td>
+                            <td><i>Red / Orange Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td class="green blink-orange led"></td>
+                            <td>Bootloader</td>
+                            <td><i>Red / Orange Alternating Blink, Right Side Only</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <br>
+
+    <details>
+        <summary>Thrifty Nova Lights</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td class="red fast led"></td>
+                            <td class="black blink-red-fast led"></td>
+                            <td>Fatal fault</td>
+                            <td><i>Red Fast Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="blue fast100 led"></td>
+                            <td class="blue fast100 led"></td>
+                            <td>Encoder not connected or invalid</td>
+                            <td><i>Orange Simultaneous Blink (10 Hz)</i></td>
+                        </tr>
+                        <tr>
+                            <td class="yellow fast led"></td>
+                            <td class="black blink-yellow-fast led"></td>
+                            <td>Enabled but output power is 0%</td>
+                            <td><i>Yellow Fast Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="yellow fast led"></td>
+                            <td class="yellow fast led"></td>
+                            <td>No CAN data detected</td>
+                            <td><i>Yellow Fast Simultaneous Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="yellow led"></td>
+                            <td class="yellow led"></td>
+                            <td>CAN detected but no control frames</td>
+                            <td><i>Yellow</i></td>
+                        </tr>
+                        <tr>
+                            <td class="green blink led"></td>
+                            <td class="green blink led"></td>
+                            <td>Forward motion. Flash rate = speed</td>
+                            <td><i>Green Simultaneous Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink led"></td>
+                            <td class="red blink led"></td>
+                            <td>Reverse motion. Flash rate = speed</td>
+                            <td><i>Red Simultaneous Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange fast led"></td>
+                            <td class="orange fast led"></td>
+                            <td>Motor halted. High temperature &gt;90&deg;C</td>
+                            <td><i>Orange Fast Simultaneous Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange fast50 led"></td>
+                            <td class="orange fast50 led"></td>
+                            <td>Warning. Approaching thermal limit &gt;75&deg;C</td>
+                            <td><i>Orange Fast Simultaneous Blink (20 Hz)</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <br>
+
+    <details>
+        <summary>Redux CANANDMAG Encoder Lights</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td class="green led"></td>
+                            <td>Magnet is in range</td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red led"></td>
+                            <td>Magnet is not in range (typically too far)</td>
+                            <td><i>Red</i></td>
+                        </tr>
+                        <tr>
+                            <td class="cyan blink led"></td>
+                            <td>Firmware update in progress</td>
+                            <td><i>Cyan Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="blue blink led"></td>
+                            <td>CAN ID conflict detected</td>
+                            <td><i>Blue Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink led"></td>
+                            <td>Hardware fault</td>
+                            <td><i>Red Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="white led"></td>
+                            <td>Encoder zero button pressed</td>
+                            <td><i>White</i></td>
+                        </tr>
+                        <tr>
+                            <td class="blue led"></td>
+                            <td><b>Dim</b> Undervoltage</td>
+                            <td><i>Dim Blue</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <details>
+        <summary>Redux CANANDGYRO IMU Lights</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td class="green slow led"></td>
+                            <td>Normal operation, roboRIO detected on CAN bus</td>
+                            <td><i>Green Slow Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red slow led"></td>
+                            <td>roboRIO not detected or other CANbus faults</td>
+                            <td><i>Red Slow Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="yellow led"></td>
+                            <td>Calibrating, operational with reduced accuracy</td>
+                            <td><i>Yellow</i></td>
+                        </tr>
+                        <tr>
+                            <td class="blue blink led"></td>
+                            <td>DFU in progress</td>
+                            <td><i>Blue Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="blue led"></td>
+                            <td>DFU failed, check Alchemist</td>
+                            <td><i>Blue</i></td>
+                        </tr>
+                        <tr>
+                            <td class="yellow blink-red led"></td>
+                            <td>Hardware fault</td>
+                            <td><i>Yellow / Red Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="blue blink-red led"></td>
+                            <td>CAN ID conflict detected</td>
+                            <td><i>Blue / Red Alternating</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <br>
+
+    <details>
+        <summary>Grapple MitoCANdria Lights</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td class="red led"></td>
+                            <td>In bootloader</td>
+                            <td><i>Red</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink-yellow led"></td>
+                            <td>Bootloader initialized</td>
+                            <td><i>Red / Yellow Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="red blink-purple led"></td>
+                            <td>Detecting CAN bitrate</td>
+                            <td><i>Red / Purple Alternating</i></td>
+                        </tr>
+                        <tr>
+                            <td class="green led"></td>
+                            <td>Firmware ready, CAN initialized</td>
+                            <td><i>Green</i></td>
+                        </tr>
+                        <tr>
+                            <td class="green blink-purple led"></td>
+                            <td>Firmware ready, CAN awaiting bitrate detection (CAN bus disconnected)</td>
+                            <td><i>Green / Purple Alternating</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <details>
+        <summary>Grapple LaserCAN Lights</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">P (Power)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="black led"></td>
+                            <td>No Power</td>
+                            <td><i>Off</i></td>
+                        </tr>
+                        <tr>
+                            <td class="green led"></td>
+                            <td>Power On</td>
+                            <td><i>Green</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="section-table has-color-description">
+                        <tr>
+                            <td colspan="2" class="bold">S (Status)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="orange blink led"></td>
+                            <td>Normal operation. Will flash at speed proportional to the distance it's reading.
+                            </td>
+                            <td><i>Orange Blink</i></td>
+                        </tr>
+                        <tr>
+                            <td class="orange led"></td>
+                            <td>In bootloader, awaiting firmware update</td>
+                            <td><i>Orange</i></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <br>
+
+    <details>
+        <summary>FRC Basic Wiring Diagram</summary>
+
+        <img alt="Layout of the core components of the control system and introductory information for them"
+             src="frc-control-system-layout-basic.svg" style="background:white;max-width:90%">
+        <p>Diagram from FRC® Team 3161 and Stefen Acepcion.</p>
+    </details>
+
+    <details>
+        <summary>FRC REV Wiring Diagram</summary>
+
+        <img alt="Layout of all popular components of the control system including REV Control System Components"
+             src="frc-control-system-layout-rev.svg" style="background:white;max-width:90%">
+        <p>Diagram from FRC® Team 3161 and Stefen Acepcion.</p>
+    </details>
+
+    <details>
+        <summary>FRC CTRE Wiring Diagram</summary>
+
+        <img alt="Layout of all popular components of the control system including CTRE Control System Components"
+             src="frc-control-system-layout-ctre.svg" style="background:white;max-width:90%">
+        <p>Diagram from FRC® Team 3161 and Stefen Acepcion.</p>
+    </details>
+
+    <details>
+        <summary>FTC Wiring Diagram (B1 - Basic)</summary>
+
+        <img alt="Basic Control Hub RC Diagram" src="ftc-control-system-layout-b1.svg"
+             style="background:white;max-width:90%">
+        <p>Diagram from FRC® Team 3161 and Stefen Acepcion.</p>
+    </details>
+
+    <details>
+        <summary>FTC Wiring Diagram (B2 - Advanced)</summary>
+
+        <img alt="Advanced Control Hub RC Diagram" src="ftc-control-system-layout-b2.svg"
+             style="background:white;max-width:90%">
+        <p>Diagram from FRC® Team 3161 and Stefen Acepcion.</p>
+    </details>
+
+    <br>
+
+    <details>
+        <summary>Limelight ChArUco Calibration</summary>
+
+        <img alt="ChArUco Calibration Board" src="ChArUco.png"
+             style="background:white;max-width:90%;max-height:90vh;">
+        <p><b>Note: </b>The ChArUco board is intended to be viewed on a large tablet<br><br>
+            Width: 11 markers<br>
+            Height: 8 markers<br>
+            Dictionary: 5x5_100<br><br>
+            <b>Important!</b> The square size and marker size must be accurately measured for proper calibration.
+            Use calipers to measure the side lengths of a black square and inner marker in millimeters. The sizes
+            shown on the board will be inaccurate.
+        </p>
+    </details>
+
+    <br>
+
+    <details>
+        <summary>Component Manuals</summary>
+
         <ul>
-            <li class="is-active">
-                <a href="/reference.html" id="reference-link">
-                    <span class="icon is-small"><i class="fas fa-book" aria-hidden="true"></i></span>
-                    <span>Reference</span>
-                </a>
+            <li><a href="https://frc-radio.vivid-hosting.net/">FRC Robot Radio</a></li>
+            <li><a href="https://www.ni.com/docs/en-US/bundle/roborio-20-umanual/page/user-manual-welcome.html">RoboRIO
+                2</a></li>
+            <li><a href="https://docs.revrobotics.com/ion-control-system/pdh/overview">REV Power Distribution
+                Hub</a></li>
+            <li><a href="https://docs.revrobotics.com/brushless/spark-max/overview/">REV Spark Max</a></li>
+            <li><a href="https://docs.revrobotics.com/brushless/spark-flex/overview">REV Spark Flex</a></li>
+            <li><a href="https://v6.docs.ctr-electronics.com/en/stable/docs/hardware-reference/talonfx/">CTRE Talon
+                FX</a></li>
+            <li><a href="https://ctre.download/files/user-manual/Talon%20SRX%20User's%20Guide.pdf">CTRE Talon
+                SRX</a></li>
+            <li><a href="https://ctre.download/files/user-manual/Victor%20SPX%20User's%20Guide.pdf">CTRE Victor
+                SPX</a></li>
+            <li><a href="https://ctre.download/files/user-manual/CANivore%20User's%20Guide.pdf">CTRE CANivore</a>
             </li>
-            <li>
-                <a href="/settings.html">
-                    <span class="icon is-small"><i class="fas fa-gear" aria-hidden="true"></i></span>
-                    <span>Settings</span>
-                </a>
-            </li>
-            <li>
-                <a href="/aboutpage.html">
-                    <span class="icon is-small"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
-                    <span>About</span>
-                </a>
-            </li>
+            <li><a href="https://v6.docs.ctr-electronics.com/en/stable/docs/hardware-reference/pigeon2/">CTRE Pigeon
+                2.0</a></li>
+            <li><a href="https://v6.docs.ctr-electronics.com/en/stable/docs/hardware-reference/cancoder/index.html">CTRE
+                CANcoder</a></li>
         </ul>
-    </div>
-
-    <div role="banner">
-        <h1 class="title is-3">CSA/FTA(A)/Team Reference</h1>
-    </div>
-
-    <div role="main">
-        <details>
-            <summary>Robot Radio Lights</summary>
-
-            <img src="vivid-radio.jpg" width="225px">
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table">
-                            <tr>
-                                <td colspan="3" class="bold">Robot Radio, No Link to Field AP</td>
-                            </tr>
-                            <tr>
-                                <td>PWR</td>
-                                <td>
-                                    <div class="green vivid-led"></div>
-                                </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td>SYS</td>
-                                <td>
-                                    <div class="green blink vivid-led"></div>
-                                </td>
-                                <td><i>Green Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td>2.4G</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td>6G</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td>Rio</td>
-                                <td class="green vivid-led"> </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table">
-                            <tr>
-                                <td colspan="3" class="bold">Robot Radio, No Link to Field AP, Programmed using WPA
-                                    Kiosk</td>
-                            </tr>
-                            <tr>
-                                <td>PWR</td>
-                                <td>
-                                    <div class="green vivid-led"></div>
-                                </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td>SYS</td>
-                                <td>
-                                    <div class="green double-blink-green vivid-led"></div>
-                                </td>
-                                <td><i>Green, Blink/Blink/Pause (.._.._) pattern</i></td>
-                            </tr>
-                            <tr>
-                                <td>2.4G</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td>6G</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td>Rio</td>
-                                <td class="green vivid-led"> </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table">
-                            <tr>
-                                <td colspan="3" class="bold">Robot Radio, Linked to Field AP</td>
-                            </tr>
-                            <tr>
-                                <td>PWR</td>
-                                <td class="green vivid-led"></td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td>SYS</td>
-                                <td class="green vivid-led"> </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td>2.4G</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td>6G</td>
-                                <td class="blue vivid-led"> </td>
-                                <td><i>Blue</i></td>
-                            </tr>
-                            <tr>
-                                <td>Rio</td>
-                                <td class="green vivid-led"> </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table">
-                            <tr>
-                                <td colspan="3" class="bold">AP Mode <span style="color:red">Look Out For</span></td>
-                            </tr>
-                            <tr>
-                                <td>PWR</td>
-                                <td>
-                                    <div class="green vivid-led"></div>
-                                </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td>SYS</td>
-                                <td>
-                                    <div class="green vivid-led"></div>
-                                </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td>2.4G</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td>6G</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td>Rio</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="3" class="bold">ERROR STATES (stuck for &gt;30 seconds)</td>
-                </tr>
-                <tr>
-                    <td>
-                        <table class="section-table">
-                            <tr>
-                                <td colspan="3" class="bold">Internal Damage (Contact Vivid for RMA) </td>
-                            </tr>
-                            <tr>
-                                <td>PWR</td>
-                                <td>
-                                    <div class="green vivid-led"></div>
-                                </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td>SYS</td>
-                                <td>
-                                    <div class="green vivid-led"></div>
-                                </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td>2.4G</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td>6G</td>
-                                <td class="blue vivid-led"> </td>
-                                <td><i>Blue</i></td>
-                            </tr>
-                            <tr>
-                                <td>Rio</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <table class="section-table">
-                            <tr>
-                                <td colspan="3" class="bold">Stuck in Bootloader (Contact Vivid for RMA) </td>
-                            </tr>
-                            <tr>
-                                <td>PWR</td>
-                                <td>
-                                    <div class="green vivid-led"></div>
-                                </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td>SYS</td>
-                                <td>
-                                    <div class="green vivid-led"></div>
-                                </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td>2.4G</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td>6G</td>
-                                <td class="blue vivid-led"> </td>
-                                <td><i>Blue</i></td>
-                            </tr>
-                            <tr>
-                                <td>Rio</td>
-                                <td class="green vivid-led"> </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <table class="section-table">
-                            <tr>
-                                <td colspan="3" class="bold">Corrupted Flash (Contact Vivid for RMA) </td>
-                            </tr>
-                            <tr>
-                                <td>PWR</td>
-                                <td>
-                                    <div class="green vivid-led"></div>
-                                </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td>SYS</td>
-                                <td>
-                                    <div class="black vivid-led"></div>
-                                </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td>2.4G</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td>6G</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td>Rio</td>
-                                <td class="green vivid-led"> </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <table class="section-table">
-                            <tr>
-                                <td colspan="3" class="bold">Partially Corrupted Flash (Contact Vivid for remote
-                                    recovery) </td>
-                            </tr>
-                            <tr>
-                                <td>PWR</td>
-                                <td>
-                                    <div class="green vivid-led"></div>
-                                </td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td>SYS</td>
-                                <td>
-                                    <div class="blink-green-50hz vivid-led"></div>
-                                </td>
-                                <td><i>Green 50Hz</i></td>
-                            </tr>
-                            <tr>
-                                <td>2.4G</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td>6G</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td>Rio</td>
-                                <td class="black vivid-led"> </td>
-                                <td><i>Off</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <details>
-            <summary>RoboRIO Lights</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">Power</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="green led"> </td>
-                                <td>OK</td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange led"> </td>
-                                <td>Brownout</td>
-                                <td><i>Orange</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red led"> </td>
-                                <td>Fault, check for short</td>
-                                <td><i>Red</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">Status</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td>OK</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange led"> </td>
-                                <td>Booting</td>
-                                <td><i>Orange</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange blink led"> </td>
-                                <td>Unrecoverable error</td>
-                                <td><i>Orange Blink</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">Radio</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td>Ignore</td>
-                                <td></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">Comm</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td>No Comms</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink led"> </td>
-                                <td>Comms, no code</td>
-                                <td><i>Red Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red led"> </td>
-                                <td>E-Stop</td>
-                                <td><i>Red</i></td>
-                            </tr>
-                            <tr>
-                                <td class="green led"> </td>
-                                <td>OK</td>
-                                <td><i>Green</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">Mode</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"></td>
-                                <td>Disabled</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange led"> </td>
-                                <td>Auto</td>
-                                <td><i>Orange</i></td>
-                            </tr>
-                            <tr>
-                                <td class="green led"> </td>
-                                <td>Teleop</td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red led"> </td>
-                                <td>Test</td>
-                                <td><i>Red</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <details>
-            <summary>SystemCore Lights</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">Power</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="green led"></td>
-                                <td>Normal Operation</td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"></td>
-                                <td>No power / Reverse Polarity</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">Mode</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="orange led"></td>
-                                <td>Robot On and Disabled</td>
-                                <td><i>Orange</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange blink led"></td>
-                                <td>Robot On and Enabled</td>
-                                <td><i>Orange Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"></td>
-                                <td>RT Subsystem disabled</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">Status</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="red led"></td>
-                                <td>Uncleared hardware fault;</td>
-                                <td><i>Red</i></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Brownout protection enabled*</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="red slow led"></td>
-                                <td>Display hardware fault</td>
-                                <td><i>Red Slow Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red fast led"></td>
-                                <td>CAN Bus Fault</td>
-                                <td><i>Red Fast Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"></td>
-                                <td>No faults</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">*Brownout protection disables PWM and digital outputs.</td>
-                                <td></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <br>
-
-        <details>
-            <summary>REV Power Distribution Lights</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="3" class="bold">General Status</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="blue led"> </td>
-                                <td>Device on but no communication established</td>
-                                <td><i>Blue</i></td>
-                            </tr>
-                            <tr>
-                                <td class="lightGreen led"> </td>
-                                <td>Main communication with robot controller established</td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td class="magenta blink led"> </td>
-                                <td>Keep alive timeout</td>
-                                <td><i>Magenta Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="cyan led"> </td>
-                                <td>Secondary heartbeat (connected to REV Hardware Client)</td>
-                                <td><i>Cyan</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange blink-blue led"> </td>
-                                <td>Low battery</td>
-                                <td><i>Orange / Blue Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange blink-yellow led"> </td>
-                                <td>CAN fault</td>
-                                <td><i>Orange / Yellow Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange blink-cyan led"> </td>
-                                <td>Hardware fault</td>
-                                <td><i>Orange / Cyan Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange blink-magenta led"> </td>
-                                <td>Device over current</td>
-                                <td><i>Orange / Magenta Alternating</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="3" class="bold">Channel Status</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td>Channel has voltage and is operating as expected</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red led"> </td>
-                                <td>Channel has NO voltage and there is an active fault. Check for tripped or missing
-                                    circuit breaker.</td>
-                                <td><i>Red</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink led"> </td>
-                                <td>Sticky fault on the channel. Check for tripped circuit breaker.</td>
-                                <td><i>Red Blink</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="3" class="bold">Switched Channel</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td>Channel has voltage and is operating as expected</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red led"> </td>
-                                <td>Channel has NO voltage and there is an active fault. Check for blown or missing
-                                    fuse.</td>
-                                <td><i>Red</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink led"> </td>
-                                <td>Sticky fault on the channel. Check for blown fuse.</td>
-                                <td><i>Red Blink</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <details>
-            <summary>REV Motor Controller Lights</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">Brushed Mode</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="blue blink led"> </td>
-                                <td>Brake No Signal</td>
-                                <td><i>Blue Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="blue led"> </td>
-                                <td>Brake Valid Signal</td>
-                                <td><i>Blue</i></td>
-                            </tr>
-                            <tr>
-                                <td class="yellow blink led"> </td>
-                                <td>Coast No Signal</td>
-                                <td><i>Yellow Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="yellow led"> </td>
-                                <td>Coast Valid Signal</td>
-                                <td><i>Yellow</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">Brushless Mode</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="cyan blink led"> </td>
-                                <td>Brake No Signal</td>
-                                <td><i>Cyan Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="cyan led"> </td>
-                                <td>Brake Valid Signal</td>
-                                <td><i>Cyan</i></td>
-                            </tr>
-                            <tr>
-                                <td class="magenta blink led"> </td>
-                                <td>Coast No Signal</td>
-                                <td><i>Magenta Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="magenta led"> </td>
-                                <td>Coast Valid Signal</td>
-                                <td><i>Magenta</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">Movement</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="lightGreen fast led"> </td>
-                                <td>Partial Forward</td>
-                                <td><i>Green Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="lightGreen led"> </td>
-                                <td>Full Forward</td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red fast led"> </td>
-                                <td>Partial Reverse</td>
-                                <td><i>Red Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red led"> </td>
-                                <td>Full Reverse</td>
-                                <td><i>Red</i></td>
-                            </tr>
-                            <tr>
-                                <td class="lightGreen blink-white led"> </td>
-                                <td>Forward Limit</td>
-                                <td><i>Green / White Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink-white led"> </td>
-                                <td>Reverse Limit</td>
-                                <td><i>Red / White Alternating</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">Identification, Updating, and Recovery</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="magenta blink-white-fast250 led"> </td>
-                                <td>Identify</td>
-                                <td><i>Magenta / White Fast Alternating (4 Hz)</i></td>
-                            </tr>
-                            <tr>
-                                <td class="yellow slow-white led"> </td>
-                                <td>CAN Firmware Updating</td>
-                                <td><i>Yellow / White Slow Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="blue slow-white led"> </td>
-                                <td>CAN Firmware Retry</td>
-                                <td><i>Blue / White Slow Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td>USB Device Firmware Update</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td>Recovery Mode</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">Fault Conditions</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="blue slow-orange led"> </td>
-                                <td>12V Missing</td>
-                                <td><i>Blue / Orange Slow Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="magenta slow-orange led"> </td>
-                                <td>Sensor Fault</td>
-                                <td><i>Magenta / Orange Slow Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="cyan slow-orange led"> </td>
-                                <td>Gate Driver Fault</td>
-                                <td><i>Cyan / Orange Slow Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="yellow slow-orange led"> </td>
-                                <td>CAN Fault</td>
-                                <td><i>Yellow / Orange Slow Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="lightGreen slow-orange led"> </td>
-                                <td>Temperature Cutoff Fault (SPARK Flex only)</td>
-                                <td><i>Green / Orange Slow Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td>Corrupt Firmware</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <br>
-
-        <details>
-            <summary>CTRE Power Distribution Lights</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="3" class="bold">COMM / STAT</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="green fast led"> </td>
-                                <td class="green fast led"> </td>
-                                <td>Robot is enabled</td>
-                                <td><i>Green Fast Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="green slow led"> </td>
-                                <td class="green slow led"> </td>
-                                <td>Robot is disabled</td>
-                                <td><i>Green Slow Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange slow led"> </td>
-                                <td class="orange slow led"> </td>
-                                <td>Robot is disabled. Sticky fault present.</td>
-                                <td><i>Orange Slow Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red slow led"> </td>
-                                <td class="red slow led"> </td>
-                                <td>No CAN bus</td>
-                                <td><i>Red Slow Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="green blink-orange led"> </td>
-                                <td class="black led"> </td>
-                                <td>Device is in bootloader. Field-upgrade necessary.</td>
-                                <td><i>Green / Orange Alternating Blink (COMM only)</i></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td class="black led"> </td>
-                                <td>Device is NOT powered</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <details>
-            <summary>CTRE Motor Controller Lights</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="3" class="bold">Disabled Codes</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td class="black led"> </td>
-                                <td>No Power</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink led"> </td>
-                                <td class="black blink-red led"> </td>
-                                <td>CAN bus/PWM is not detected</td>
-                                <td><i>Red Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange blink led"> </td>
-                                <td class="black blink-orange led"> </td>
-                                <td>CAN bus detected, Phoenix not running on robot</td>
-                                <td><i>Orange Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange blink led"> </td>
-                                <td class="orange blink led"> </td>
-                                <td>CAN bus detected, robot disabled</td>
-                                <td><i>Orange Simultaneous Blink</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="3" class="bold">Enabled Codes</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="orange led"> </td>
-                                <td class="orange led"> </td>
-                                <td>Enabled, no output</td>
-                                <td><i>Orange</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink led"> </td>
-                                <td class="red blink led"> </td>
-                                <td>Reverse Movement</td>
-                                <td><i>Red Simultaneous Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="green blink led"> </td>
-                                <td class="green blink led"> </td>
-                                <td>Forward Movement</td>
-                                <td><i>Green Simultaneous Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="offset-red-a led"> </td>
-                                <td class="offset-red-b led"> </td>
-                                <td>Limit hit. Direction of blink indicates forward/reverse.</td>
-                                <td><i>Red Alternating Blink Followed by Off</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="3" class="bold">Special Codes</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="offset-orange-a led"> </td>
-                                <td class="offset-orange-b led"> </td>
-                                <td>Thermal Shutoff</td>
-                                <td><i>Orange Alternating Blink Followed by Off</i></td>
-                            </tr>
-                            <tr>
-                                <td class="green blink-red led"> </td>
-                                <td class="red blink-green led"> </td>
-                                <td>Unlicensed Phoenix Pro</td>
-                                <td><i>Red / Green Alternating Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink-orange led"> </td>
-                                <td class="orange blink-red led"> </td>
-                                <td>Hardware Damage</td>
-                                <td><i>Red / Orange Alternating Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td class="green blink-orange led"> </td>
-                                <td>Bootloader</td>
-                                <td><i>Red / Orange Alternating Blink, Right Side Only</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <details>
-            <summary>CTRE CANivore Lights</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">STAT</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td>No Power</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td class="double-blink-red led"> </td>
-                                <td>Powered but USB not plugged in</td>
-                                <td><i>Red Double Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="fast-strobe-red led"> </td>
-                                <td>USB plugged in but no comms</td>
-                                <td><i>Red Fast Strobe</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange double-blink-orange led"> </td>
-                                <td>CAN disabled, no power</td>
-                                <td><i>Orange Double Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="fast-strobe-orange led"> </td>
-                                <td>CAN disabled</td>
-                                <td><i>Orange Fast Strobe</i></td>
-                            </tr>
-                            <tr>
-                                <td class="green double-blink-green led"> </td>
-                                <td>CAN enabled, no power</td>
-                                <td><i>Green Double Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="fast-strobe-green led"> </td>
-                                <td>CAN enabled</td>
-                                <td><i>Green Fast Strobe</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink-orange-fast led"> </td>
-                                <td>Hardware Damage</td>
-                                <td><i>Red / Orange Fast Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="green blink-orange-fast led"> </td>
-                                <td>Bootloader</td>
-                                <td><i>Green / Orange Fast Alternating</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">WIFI</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="green fast led"> </td>
-                                <td>Wi-Fi Enabled</td>
-                                <td><i>Green Fast Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td>Wi-Fi Disabled</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">BT</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="green fast led"> </td>
-                                <td>Bluetooth Enabled</td>
-                                <td><i>Green Fast Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td>Bluetooth Disabled</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">CAN (double blink = termination disabled)</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="red led"> </td>
-                                <td>Voltage too low for CAN bus</td>
-                                <td><i>Red</i></td>
-                            </tr>
-                            <tr>
-                                <td class="fast-strobe-red led"> </td>
-                                <td>No CAN comms</td>
-                                <td><i>Red Fast Strobe</i></td>
-                            </tr>
-                            <tr>
-                                <td class="fast-strobe-orange led"> </td>
-                                <td>CAN 2.0b legacy mode</td>
-                                <td><i>Orange Fast Strobe</i></td>
-                            </tr>
-                            <tr>
-                                <td class="fast-strobe-green led"> </td>
-                                <td>CAN FD Active</td>
-                                <td><i>Green Fast Strobe</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <details>
-            <summary>CTRE CANcoder Lights</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">(dim = no CAN)</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td>No Power</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink led"></td>
-                                <td>CAN bus lost</td>
-                                <td><i>Red Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="fast-strobe-red led"></td>
-                                <td>Magnet is out of range (&lt;25mT or &gt;135mT)</td>
-                                <td><i>Red Fast Strobe</i></td>
-                            </tr>
-                            <tr>
-                                <td class="fast-strobe-orange led"></td>
-                                <td>Magnet in range with <i>slightly</i> reduced accuracy (25-45mT or 75-135mT)</td>
-                                <td><i>Orange Fast Strobe</i></td>
-                            </tr>
-                            <tr>
-                                <td class="fast-strobe-green led"></td>
-                                <td>Magnet in range (between 45mT-75mT)</td>
-                                <td><i>Green Fast Strobe</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink-orange led"> </td>
-                                <td>Hardware Damage</td>
-                                <td><i>Red / Orange Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="green blink-orange led"> </td>
-                                <td>Bootloader</td>
-                                <td><i>Green / Orange Alternating</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <details>
-            <summary>CTRE Pigeon Lights</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td class="black led"> </td>
-                                <td class="black led"> </td>
-                                <td>No Power</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink led"> </td>
-                                <td class="black blink-red led"> </td>
-                                <td>No CAN bus detected</td>
-                                <td><i>Red Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="black blink-orange led"> </td>
-                                <td class="orange blink-black led"> </td>
-                                <td>CAN bus detected, Phoenix not running on robot</td>
-                                <td><i>Orange Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange blink led"> </td>
-                                <td class="orange blink led"> </td>
-                                <td>CAN bus detected. Robot disabled.</td>
-                                <td><i>Orange Simultaneous Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="green blink led"> </td>
-                                <td class="black blink-green led"> </td>
-                                <td>CAN bus detected. Robot enabled.</td>
-                                <td><i>Green Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink-orange led"> </td>
-                                <td class="orange blink-red led"> </td>
-                                <td>Hardware Damage</td>
-                                <td><i>Red / Orange Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td class="green blink-orange led"> </td>
-                                <td>Bootloader</td>
-                                <td><i>Red / Orange Alternating Blink, Right Side Only</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <br>
-
-        <details>
-            <summary>Thrifty Nova Lights</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td class="red fast led"> </td>
-                                <td class="black blink-red-fast led"> </td>
-                                <td>Fatal fault</td>
-                                <td><i>Red Fast Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="blue fast100 led"> </td>
-                                <td class="blue fast100 led"> </td>
-                                <td>Encoder not connected or invalid</td>
-                                <td><i>Orange Simultaneous Blink (10 Hz)</i></td>
-                            </tr>
-                            <tr>
-                                <td class="yellow fast led"> </td>
-                                <td class="black blink-yellow-fast led"> </td>
-                                <td>Enabled but output power is 0%</td>
-                                <td><i>Yellow Fast Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="yellow fast led"> </td>
-                                <td class="yellow fast led"> </td>
-                                <td>No CAN data detected</td>
-                                <td><i>Yellow Fast Simultaneous Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="yellow led"> </td>
-                                <td class="yellow led"> </td>
-                                <td>CAN detected but no control frames</td>
-                                <td><i>Yellow</i></td>
-                            </tr>
-                            <tr>
-                                <td class="green blink led"> </td>
-                                <td class="green blink led"> </td>
-                                <td>Forward motion. Flash rate = speed</td>
-                                <td><i>Green Simultaneous Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink led"> </td>
-                                <td class="red blink led"> </td>
-                                <td>Reverse motion. Flash rate = speed</td>
-                                <td><i>Red Simultaneous Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange fast led"> </td>
-                                <td class="orange fast led"> </td>
-                                <td>Motor halted. High temperature &gt;90&deg;C</td>
-                                <td><i>Orange Fast Simultaneous Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange fast50 led"> </td>
-                                <td class="orange fast50 led"> </td>
-                                <td>Warning. Approaching thermal limit &gt;75&deg;C</td>
-                                <td><i>Orange Fast Simultaneous Blink (20 Hz)</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <br>
-
-        <details>
-            <summary>Redux CANANDMAG Encoder Lights</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td class="green led"> </td>
-                                <td>Magnet is in range</td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red led"> </td>
-                                <td>Magnet is not in range (typically too far)</td>
-                                <td><i>Red</i></td>
-                            </tr>
-                            <tr>
-                                <td class="cyan blink led"> </td>
-                                <td>Firmware update in progress</td>
-                                <td><i>Cyan Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="blue blink led"> </td>
-                                <td>CAN ID conflict detected</td>
-                                <td><i>Blue Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink led"> </td>
-                                <td>Hardware fault</td>
-                                <td><i>Red Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="white led"> </td>
-                                <td>Encoder zero button pressed</td>
-                                <td><i>White</i></td>
-                            </tr>
-                            <tr>
-                                <td class="blue led"> </td>
-                                <td><b>Dim</b> Undervoltage</td>
-                                <td><i>Dim Blue</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <details>
-            <summary>Redux CANANDGYRO IMU Lights</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td class="green slow led"> </td>
-                                <td>Normal operation, roboRIO detected on CAN bus</td>
-                                <td><i>Green Slow Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red slow led"> </td>
-                                <td>roboRIO not detected or other CANbus faults</td>
-                                <td><i>Red Slow Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="yellow led"> </td>
-                                <td>Calibrating, operational with reduced accuracy</td>
-                                <td><i>Yellow</i></td>
-                            </tr>
-                            <tr>
-                                <td class="blue blink led"> </td>
-                                <td>DFU in progress</td>
-                                <td><i>Blue Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="blue led"> </td>
-                                <td>DFU failed, check Alchemist</td>
-                                <td><i>Blue</i></td>
-                            </tr>
-                            <tr>
-                                <td class="yellow blink-red led"> </td>
-                                <td>Hardware fault</td>
-                                <td><i>Yellow / Red Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="blue blink-red led"> </td>
-                                <td>CAN ID conflict detected</td>
-                                <td><i>Blue / Red Alternating</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <br>
-
-        <details>
-            <summary>Grapple MitoCANdria Lights</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td class="red led"> </td>
-                                <td>In bootloader</td>
-                                <td><i>Red</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink-yellow led"> </td>
-                                <td>Bootloader initialized</td>
-                                <td><i>Red / Yellow Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="red blink-purple led"> </td>
-                                <td>Detecting CAN bitrate</td>
-                                <td><i>Red / Purple Alternating</i></td>
-                            </tr>
-                            <tr>
-                                <td class="green led"> </td>
-                                <td>Firmware ready, CAN initialized</td>
-                                <td><i>Green</i></td>
-                            </tr>
-                            <tr>
-                                <td class="green blink-purple led"> </td>
-                                <td>Firmware ready, CAN awaiting bitrate detection (CAN bus disconnected)</td>
-                                <td><i>Green / Purple Alternating</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <details>
-            <summary>Grapple LaserCAN Lights</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">P (Power)</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="black led"> </td>
-                                <td>No Power</td>
-                                <td><i>Off</i></td>
-                            </tr>
-                            <tr>
-                                <td class="green led"> </td>
-                                <td>Power On</td>
-                                <td><i>Green</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table class="section-table has-color-description">
-                            <tr>
-                                <td colspan="2" class="bold">S (Status)</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="orange blink led"> </td>
-                                <td>Normal operation. Will flash at speed proportional to the distance it's reading.
-                                </td>
-                                <td><i>Orange Blink</i></td>
-                            </tr>
-                            <tr>
-                                <td class="orange led"> </td>
-                                <td>In bootloader, awaiting firmware update</td>
-                                <td><i>Orange</i></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <br>
-
-        <details>
-            <summary>FRC Basic Wiring Diagram</summary>
-
-            <img alt="Layout of the core components of the control system and introductory information for them"
-                src="frc-control-system-layout-basic.svg" style="background:white;max-width:90%">
-            <p>Diagram from FRC® Team 3161 and Stefen Acepcion.</p>
-        </details>
-
-        <details>
-            <summary>FRC REV Wiring Diagram</summary>
-
-            <img alt="Layout of all popular components of the control system including REV Control System Components"
-                src="frc-control-system-layout-rev.svg" style="background:white;max-width:90%">
-            <p>Diagram from FRC® Team 3161 and Stefen Acepcion.</p>
-        </details>
-
-        <details>
-            <summary>FRC CTRE Wiring Diagram</summary>
-
-            <img alt="Layout of all popular components of the control system including CTRE Control System Components"
-                src="frc-control-system-layout-ctre.svg" style="background:white;max-width:90%">
-            <p>Diagram from FRC® Team 3161 and Stefen Acepcion.</p>
-        </details>
-
-        <details>
-            <summary>FTC Wiring Diagram (B1 - Basic)</summary>
-
-            <img alt="Basic Control Hub RC Diagram" src="ftc-control-system-layout-b1.svg"
-                style="background:white;max-width:90%">
-            <p>Diagram from FRC® Team 3161 and Stefen Acepcion.</p>
-        </details>
-
-        <details>
-            <summary>FTC Wiring Diagram (B2 - Advanced)</summary>
-
-            <img alt="Advanced Control Hub RC Diagram" src="ftc-control-system-layout-b2.svg"
-                style="background:white;max-width:90%">
-            <p>Diagram from FRC® Team 3161 and Stefen Acepcion.</p>
-        </details>
-
-        <br>
-
-        <details>
-            <summary>Limelight ChArUco Calibration</summary>
-
-            <img alt="ChArUco Calibration Board" src="ChArUco.png"
-                style="background:white;max-width:90%;max-height:90vh;">
-            <p><b>Note: </b>The ChArUco board is intended to be viewed on a large tablet<br><br>
-                Width: 11 markers<br>
-                Height: 8 markers<br>
-                Dictionary: 5x5_100<br><br>
-                <b>Important!</b> The square size and marker size must be accurately measured for proper calibration.
-                Use calipers to measure the side lengths of a black square and inner marker in millimeters. The sizes
-                shown on the board will be inaccurate.
-            </p>
-        </details>
-
-        <br>
-
-        <details>
-            <summary>Component Manuals</summary>
-
-            <ul>
-                <li><a href="https://frc-radio.vivid-hosting.net/">FRC Robot Radio</a></li>
-                <li><a href="https://www.ni.com/docs/en-US/bundle/roborio-20-umanual/page/user-manual-welcome.html">RoboRIO
-                        2</a></li>
-                <li><a href="https://docs.revrobotics.com/ion-control-system/pdh/overview">REV Power Distribution
-                        Hub</a></li>
-                <li><a href="https://docs.revrobotics.com/brushless/spark-max/overview/">REV Spark Max</a></li>
-                <li><a href="https://docs.revrobotics.com/brushless/spark-flex/overview">REV Spark Flex</a></li>
-                <li><a href="https://v6.docs.ctr-electronics.com/en/stable/docs/hardware-reference/talonfx/">CTRE Talon
-                        FX</a></li>
-                <li><a href="https://ctre.download/files/user-manual/Talon%20SRX%20User's%20Guide.pdf">CTRE Talon
-                        SRX</a></li>
-                <li><a href="https://ctre.download/files/user-manual/Victor%20SPX%20User's%20Guide.pdf">CTRE Victor
-                        SPX</a></li>
-                <li><a href="https://ctre.download/files/user-manual/CANivore%20User's%20Guide.pdf">CTRE CANivore</a>
-                </li>
-                <li><a href="https://v6.docs.ctr-electronics.com/en/stable/docs/hardware-reference/pigeon2/">CTRE Pigeon
-                        2.0</a></li>
-                <li><a href="https://v6.docs.ctr-electronics.com/en/stable/docs/hardware-reference/cancoder/index.html">CTRE
-                        CANcoder</a></li>
-            </ul>
-        </details>
-
-        <details>
-            <summary>Software Documentation</summary>
-
-            <ul>
-                <li><a href="https://github.wpilib.org/allwpilib/docs/release/java/index.html">WPILib Java API
-                        Documentation</a></li>
-                <li><a href="https://github.wpilib.org/allwpilib/docs/release/cpp/index.html">WPILib C++ API
-                        Documentation</a></li>
-                <li><a href="https://robotpy.readthedocs.io/projects/robotpy/en/stable/">WPILib Python API
-                        Documentation</a></li>
-                <li><a href="https://docs.wpilib.org/en/stable/docs/software/commandbased/index.html">WPILib
-                        Commands</a></li>
-                <li><a href="https://v6.docs.ctr-electronics.com/en/stable/index.html">CTRE Phoenix 6</a></li>
-                <li><a href="https://api.ctr-electronics.com/phoenix6/latest/java/index.html">CTRE Phoenix 6 Java API
-                        Documentation</a></li>
-                <li><a href="https://api.ctr-electronics.com/phoenix6/latest/cpp/index.html">CTRE Phoenix 6 C++ API
-                        Documentation</a></li>
-                <li><a href="https://api.ctr-electronics.com/phoenix6/latest/python/index.html">CTRE Phoenix 6 Python
-                        API Documentation</a></li>
-                <li><a href="https://v5.docs.ctr-electronics.com/en/stable/">CTRE Phoenix 5</a></li>
-                <li><a href="https://api.ctr-electronics.com/phoenix/stable/java/">CTRE Phoenix 5 Java API
-                        Documentation</a></li>
-                <li><a href="https://api.ctr-electronics.com/phoenix/stable/cpp/">CTRE Phoenix 5 C++ API
-                        Documentation</a></li>
-                <li><a href="https://docs.reduxrobotics.com/reduxlib">ReduxLib</a></li>
-                <li><a href="https://apidocs.reduxrobotics.com/current/java/">ReduxLib Java API Documentation</a></li>
-                <li><a href="https://apidocs.reduxrobotics.com/current/cpp/">ReduxLib C++ API Documentation</a></li>
-                <li><a
-                        href="https://www.playingwithfusion.com/frc/2025/javadoc/com/playingwithfusion/package-summary.html">Playing
-                        with Fusion Java API Documentation</a></li>
-                <li><a href="https://www.playingwithfusion.com/frc/2025/cppdoc/html/annotated.html">Playing with Fusion
-                        C++ API Documentation</a></li>
-                <li><a
-                        href="https://www.kauailabs.com/public_files/navx-mxp/apidocs/java/com/kauailabs/navx/frc/package-summary.html">Kauai
-                        Labs (navX MXP) Java API Documentation</a></li>
-                <li><a href="https://www.kauailabs.com/public_files/navx-mxp/apidocs/c++/">Kauai Labs (navX MXP) C++ API
-                        Documentation</a></li>
-                <li><a href="https://www.kauailabs.com/public_files/navx-mxp/apidocs/labview/index.html">Kauai Labs
-                        (navX MXP) LabVIEW API Documentation</a></li>
-                <li><a href="https://docs.revrobotics.com/docs/software-resources">REVLib</a></li>
-                <li><a href="https://codedocs.revrobotics.com/java/com/revrobotics/package-summary.html">REVLib Java API
-                        Documentation</a></li>
-                <li><a href="https://codedocs.revrobotics.com/cpp/namespacerev.html">REVLib C++ API Documentation</a>
-                </li>
-                <li><a href="https://docs.photonvision.org/en/latest/docs/description.html">PhotonVision</a></li>
-                <li><a href="https://javadocs.photonvision.org/">PhotonVision Java API Documentation</a></li>
-                <li><a href="https://cppdocs.photonvision.org/">PhotonVision C++ API Documentation</a></li>
-                <li><a href="https://pathplanner.dev/home.html">PathPlanner</a></li>
-                <li><a href="https://pathplanner.dev/api/java/">PathPlanner Java API Documentation</a></li>
-                <li><a href="https://pathplanner.dev/api/cpp/">PathPlanner C++ API Documentation</a></li>
-                <li><a href="https://pathplanner.dev/api/python/">PathPlanner Python API Documentation</a></li>
-                <li><a href="https://choreo.autos/">Choreo</a></li>
-                <li><a href="https://choreo.autos/api/choreolib/java/index.html">Choreo Java API Documentation</a></li>
-                <li><a href="https://choreo.autos/api/choreolib/cpp/index.html">Choreo C++ API Documentation</a></li>
-                <li><a href="https://docs.yagsl.com/">YAGSL</a></li>
-                <li><a href="https://broncbotz3481.github.io/YAGSL-Lib/docs/">YAGSL Java API Documentation</a></li>
-                <li><a href="https://doglog.dev/">DogLog</a></li>
-                <li><a href="https://javadoc.doglog.dev/">DogLog Java API Documentation</a></li>
-            </ul>
-        </details>
-
-        <details>
-            <summary>Keyboard Shortcuts</summary>
-
-            <h3>Driver Station</h3>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table">
-                            <tr>
-                                <td width="125"><code>F1</code></td>
-                                <td>Joystick rescan</td>
-                            </tr>
-                            <tr>
-                                <td><code>[</code> + <code>]</code> + <code>\</code></td>
-                                <td>Enable Robot</td>
-                            </tr>
-                            <tr>
-                                <td><code>Enter</code></td>
-                                <td>Disable Robot</td>
-                            </tr>
-                            <tr>
-                                <td><code>Space</code></td>
-                                <td>E-Stop</td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <details>
-            <summary>Team IP Addresses</summary>
-            <h3>IP Address Subnets</h3>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table">
-                            <tr>
-                                <td width="125">Team 1</td>
-                                <td>10.0.1.x</td>
-                            </tr>
-                            <tr>
-                                <td>Team 12</td>
-                                <td>10.0.12.x</td>
-                            </tr>
-                            <tr>
-                                <td>Team 123</td>
-                                <td>10.1.23.x</td>
-                            </tr>
-                            <tr>
-                                <td>Team 1234</td>
-                                <td>10.12.34.x</td>
-                            </tr>
-                            <tr>
-                                <td>Team 12345</td>
-                                <td>10.123.45.x</td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-
-            <h3>IP Addresses</h3>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table">
-                            <tr>
-                                <td width="125">Robot Radio</td>
-                                <td>10.TE.AM.1</td>
-                            </tr>
-                            <tr>
-                                <td>roboRIO/SystemCore</td>
-                                <td>10.TE.AM.2</td>
-                            </tr>
-                            <tr>
-                                <td>roboRIO USB</td>
-                                <td>172.22.11.2</td>
-                            </tr>
-                            <tr>
-                                <td>roboRIO Name</td>
-                                <td>roborio-TEAM-frc.local</td>
-                            </tr>
-                            <tr>
-                                <td>SystemCore Wi-Fi</td>
-                                <td>172.30.0.1</td>
-                            </tr>
-                            <tr>
-                                <td>SystemCore USB (Windows)</td>
-                                <td>172.28.0.1</td>
-                            </tr>
-                            <tr>
-                                <td>SystemCore USB (Mac/Linux)</td>
-                                <td>172.29.0.1</td>
-                            </tr>
-                            <tr>
-                                <td>Field AP</td>
-                                <td>10.TE.AM.4</td>
-                            </tr>
-                            <tr>
-                                <td>Driver Station</td>
-                                <td>10.TE.AM.5</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><span class="highlight">(subnet 255.0.0.0)</span></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-
-        <details>
-            <summary>Helpful Commands</summary>
-
-            <table cellpadding="5" cellspacing="0" class="led-table">
-                <tr>
-                    <td>
-                        <table class="section-table">
-                            <tr>
-                                <td width="125">ncpa.cpl</td>
-                                <td>Network adapters</td>
-                            </tr>
-                            <tr>
-                                <td>wf.msc</td>
-                                <td>Windows firewall</td>
-                            </tr>
-                            <tr>
-                                <td>ipconfig</td>
-                                <td>Show network settings</td>
-                            </tr>
-                            <tr>
-                                <td>ipconfig /release</td>
-                                <td>Release DHCP address</td>
-                            </tr>
-                            <tr>
-                                <td>ipconfig /renew</td>
-                                <td>Acquire DHCP address</td>
-                            </tr>
-                            <tr>
-                                <td>ping 10.TE.AM.255</td>
-                                <td>Scans network</td>
-                            </tr>
-                            <tr>
-                                <td>arp -a</td>
-                                <td>Shows reachable IPs</td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </details>
-    </div>
-
-    <br><br>
-    <p role="contentinfo">Have a request for something to be added? Create an issue or PR on <a
-            href="https://github.com/jschenke488/CSA-Buddy-Assets/issues">GitHub</a> or post on <a
-            href="https://www.chiefdelphi.com/t/csa-buddy-offline-csa-and-team-reference-app-for-led-status-wiring-diagrams-and-more/514489">Chief
-            Delphi</a>! :)</p>
+    </details>
+
+    <details>
+        <summary>Software Documentation</summary>
+
+        <ul>
+            <li><a href="https://github.wpilib.org/allwpilib/docs/release/java/index.html">WPILib Java API
+                Documentation</a></li>
+            <li><a href="https://github.wpilib.org/allwpilib/docs/release/cpp/index.html">WPILib C++ API
+                Documentation</a></li>
+            <li><a href="https://robotpy.readthedocs.io/projects/robotpy/en/stable/">WPILib Python API
+                Documentation</a></li>
+            <li><a href="https://docs.wpilib.org/en/stable/docs/software/commandbased/index.html">WPILib
+                Commands</a></li>
+            <li><a href="https://v6.docs.ctr-electronics.com/en/stable/index.html">CTRE Phoenix 6</a></li>
+            <li><a href="https://api.ctr-electronics.com/phoenix6/latest/java/index.html">CTRE Phoenix 6 Java API
+                Documentation</a></li>
+            <li><a href="https://api.ctr-electronics.com/phoenix6/latest/cpp/index.html">CTRE Phoenix 6 C++ API
+                Documentation</a></li>
+            <li><a href="https://api.ctr-electronics.com/phoenix6/latest/python/index.html">CTRE Phoenix 6 Python
+                API Documentation</a></li>
+            <li><a href="https://v5.docs.ctr-electronics.com/en/stable/">CTRE Phoenix 5</a></li>
+            <li><a href="https://api.ctr-electronics.com/phoenix/stable/java/">CTRE Phoenix 5 Java API
+                Documentation</a></li>
+            <li><a href="https://api.ctr-electronics.com/phoenix/stable/cpp/">CTRE Phoenix 5 C++ API
+                Documentation</a></li>
+            <li><a href="https://docs.reduxrobotics.com/reduxlib">ReduxLib</a></li>
+            <li><a href="https://apidocs.reduxrobotics.com/current/java/">ReduxLib Java API Documentation</a></li>
+            <li><a href="https://apidocs.reduxrobotics.com/current/cpp/">ReduxLib C++ API Documentation</a></li>
+            <li><a
+                    href="https://www.playingwithfusion.com/frc/2025/javadoc/com/playingwithfusion/package-summary.html">Playing
+                with Fusion Java API Documentation</a></li>
+            <li><a href="https://www.playingwithfusion.com/frc/2025/cppdoc/html/annotated.html">Playing with Fusion
+                C++ API Documentation</a></li>
+            <li><a
+                    href="https://www.kauailabs.com/public_files/navx-mxp/apidocs/java/com/kauailabs/navx/frc/package-summary.html">Kauai
+                Labs (navX MXP) Java API Documentation</a></li>
+            <li><a href="https://www.kauailabs.com/public_files/navx-mxp/apidocs/c++/">Kauai Labs (navX MXP) C++ API
+                Documentation</a></li>
+            <li><a href="https://www.kauailabs.com/public_files/navx-mxp/apidocs/labview/index.html">Kauai Labs
+                (navX MXP) LabVIEW API Documentation</a></li>
+            <li><a href="https://docs.revrobotics.com/docs/software-resources">REVLib</a></li>
+            <li><a href="https://codedocs.revrobotics.com/java/com/revrobotics/package-summary.html">REVLib Java API
+                Documentation</a></li>
+            <li><a href="https://codedocs.revrobotics.com/cpp/namespacerev.html">REVLib C++ API Documentation</a>
+            </li>
+            <li><a href="https://docs.photonvision.org/en/latest/docs/description.html">PhotonVision</a></li>
+            <li><a href="https://javadocs.photonvision.org/">PhotonVision Java API Documentation</a></li>
+            <li><a href="https://cppdocs.photonvision.org/">PhotonVision C++ API Documentation</a></li>
+            <li><a href="https://pathplanner.dev/home.html">PathPlanner</a></li>
+            <li><a href="https://pathplanner.dev/api/java/">PathPlanner Java API Documentation</a></li>
+            <li><a href="https://pathplanner.dev/api/cpp/">PathPlanner C++ API Documentation</a></li>
+            <li><a href="https://pathplanner.dev/api/python/">PathPlanner Python API Documentation</a></li>
+            <li><a href="https://choreo.autos/">Choreo</a></li>
+            <li><a href="https://choreo.autos/api/choreolib/java/index.html">Choreo Java API Documentation</a></li>
+            <li><a href="https://choreo.autos/api/choreolib/cpp/index.html">Choreo C++ API Documentation</a></li>
+            <li><a href="https://docs.yagsl.com/">YAGSL</a></li>
+            <li><a href="https://broncbotz3481.github.io/YAGSL-Lib/docs/">YAGSL Java API Documentation</a></li>
+            <li><a href="https://doglog.dev/">DogLog</a></li>
+            <li><a href="https://javadoc.doglog.dev/">DogLog Java API Documentation</a></li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Keyboard Shortcuts</summary>
+
+        <h3>Driver Station</h3>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table">
+                        <tr>
+                            <td width="125"><code>F1</code></td>
+                            <td>Joystick rescan</td>
+                        </tr>
+                        <tr>
+                            <td><code>[</code> + <code>]</code> + <code>\</code></td>
+                            <td>Enable Robot</td>
+                        </tr>
+                        <tr>
+                            <td><code>Enter</code></td>
+                            <td>Disable Robot</td>
+                        </tr>
+                        <tr>
+                            <td><code>Space</code></td>
+                            <td>E-Stop</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <details>
+        <summary>Team IP Addresses</summary>
+        <h3>IP Address Subnets</h3>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table">
+                        <tr>
+                            <td width="125">Team 1</td>
+                            <td>10.0.1.x</td>
+                        </tr>
+                        <tr>
+                            <td>Team 12</td>
+                            <td>10.0.12.x</td>
+                        </tr>
+                        <tr>
+                            <td>Team 123</td>
+                            <td>10.1.23.x</td>
+                        </tr>
+                        <tr>
+                            <td>Team 1234</td>
+                            <td>10.12.34.x</td>
+                        </tr>
+                        <tr>
+                            <td>Team 12345</td>
+                            <td>10.123.45.x</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <h3>IP Addresses</h3>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table">
+                        <tr>
+                            <td width="125">Robot Radio</td>
+                            <td>10.TE.AM.1</td>
+                        </tr>
+                        <tr>
+                            <td>roboRIO/SystemCore</td>
+                            <td>10.TE.AM.2</td>
+                        </tr>
+                        <tr>
+                            <td>roboRIO USB</td>
+                            <td>172.22.11.2</td>
+                        </tr>
+                        <tr>
+                            <td>roboRIO Name</td>
+                            <td>roborio-TEAM-frc.local</td>
+                        </tr>
+                        <tr>
+                            <td>SystemCore Wi-Fi</td>
+                            <td>172.30.0.1</td>
+                        </tr>
+                        <tr>
+                            <td>SystemCore USB (Windows)</td>
+                            <td>172.28.0.1</td>
+                        </tr>
+                        <tr>
+                            <td>SystemCore USB (Mac/Linux)</td>
+                            <td>172.29.0.1</td>
+                        </tr>
+                        <tr>
+                            <td>Field AP</td>
+                            <td>10.TE.AM.4</td>
+                        </tr>
+                        <tr>
+                            <td>Driver Station</td>
+                            <td>10.TE.AM.5</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><span class="highlight">(subnet 255.0.0.0)</span></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+
+    <details>
+        <summary>Helpful Commands</summary>
+
+        <table cellpadding="5" cellspacing="0" class="led-table">
+            <tr>
+                <td>
+                    <table class="section-table">
+                        <tr>
+                            <td width="125">ncpa.cpl</td>
+                            <td>Network adapters</td>
+                        </tr>
+                        <tr>
+                            <td>wf.msc</td>
+                            <td>Windows firewall</td>
+                        </tr>
+                        <tr>
+                            <td>ipconfig</td>
+                            <td>Show network settings</td>
+                        </tr>
+                        <tr>
+                            <td>ipconfig /release</td>
+                            <td>Release DHCP address</td>
+                        </tr>
+                        <tr>
+                            <td>ipconfig /renew</td>
+                            <td>Acquire DHCP address</td>
+                        </tr>
+                        <tr>
+                            <td>ping 10.TE.AM.255</td>
+                            <td>Scans network</td>
+                        </tr>
+                        <tr>
+                            <td>arp -a</td>
+                            <td>Shows reachable IPs</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </details>
+</div>
+
+<br><br>
+<p role="contentinfo">Have a request for something to be added? Create an issue or PR on <a
+        href="https://github.com/jschenke488/CSA-Buddy-Assets/issues">GitHub</a> or post on <a
+        href="https://www.chiefdelphi.com/t/csa-buddy-offline-csa-and-team-reference-app-for-led-status-wiring-diagrams-and-more/514489">Chief
+    Delphi</a>! :)</p>
 </body>
 
 </html>

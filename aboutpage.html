@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <title>About CSA Buddy</title>
     <meta name="description"
-        content="Reference app for LED status, wiring diagrams, and more in FIRST Robotics Competition and FIRST Tech Challenge">
+          content="Reference app for LED status, wiring diagrams, and more in FIRST Robotics Competition and FIRST Tech Challenge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bulma.min.css">
     <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
@@ -30,203 +30,204 @@
 </head>
 
 <body class="isWebView m-2">
-    <!-- The isWebView class is used to determine if this is running in the mobile apps. A script removes this class if running in a regular browser. -->
+<!-- The isWebView class is used to determine if this is running in the mobile apps. A script removes this class if running in a regular browser. -->
 
-    <div class="tabs is-centered hideInWebView" id="web-navbar" role="navigation">
-        <ul>
-            <li>
-                <a href="/reference.html" id="reference-link">
-                    <span class="icon is-small"><i class="fas fa-book" aria-hidden="true"></i></span>
-                    <span>Reference</span>
-                </a>
-            </li>
-            <li>
-                <a href="/settings.html">
-                    <span class="icon is-small"><i class="fas fa-gear" aria-hidden="true"></i></span>
-                    <span>Settings</span>
-                </a>
-            </li>
-            <li class="is-active">
-                <a href="/aboutpage.html">
-                    <span class="icon is-small"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
-                    <span>About</span>
-                </a>
-            </li>
-        </ul>
+<div class="tabs is-centered hideInWebView" id="web-navbar" role="navigation">
+    <ul>
+        <li>
+            <a href="/reference.html" id="reference-link">
+                <span class="icon is-small"><i class="fas fa-book" aria-hidden="true"></i></span>
+                <span>Reference</span>
+            </a>
+        </li>
+        <li>
+            <a href="/settings.html">
+                <span class="icon is-small"><i class="fas fa-gear" aria-hidden="true"></i></span>
+                <span>Settings</span>
+            </a>
+        </li>
+        <li class="is-active">
+            <a href="/aboutpage.html">
+                <span class="icon is-small"><i class="fas fa-circle-info" aria-hidden="true"></i></span>
+                <span>About</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="div" style="text-align: center" role="banner">
+    <h1 class="title is-3">CSA Buddy</h1>
+    <h2 class="title is-4">Version 2.0.6</h2>
+    <p>Copyright 2026</p>
+    <p>Jay Schenke & Ken Schenke</p>
+    <div class="container is-max-tablet hideInWebView">
+        <span class="tag is-warning" id="offline-status">not offline ready</span>
+        <article class="message is-danger is-hidden my-4" id="offline-error">
+            <div class="message-header">
+                <p>Error</p>
+            </div>
+            <div class="message-body">
+                Unable to download web app for offline use
+            </div>
+        </article>
     </div>
+</div>
 
-    <div class="div" style="text-align: center" role="banner">
-        <h1 class="title is-3">CSA Buddy</h1>
-        <h2 class="title is-4">Version 2.0.6</h2>
-        <p>Copyright 2026</p>
-        <p>Jay Schenke & Ken Schenke</p>
-        <div class="container is-max-tablet hideInWebView">
-            <span class="tag is-warning" id="offline-status">not offline ready</span>
-            <article class="message is-danger is-hidden my-4" id="offline-error">
-                <div class="message-header">
-                    <p>Error</p>
-                </div>
-                <div class="message-body">
-                    Unable to download web app for offline use
-                </div>
-            </article>
-        </div>
-    </div>
-
-    <div role="main">
-        <div class="hideInWebView downloads">
-            <h2 class="title is-4 mt-4">
-                Downloads
-            </h2>
-
-            <h2 class="title is-5 mt-4 mb-4">
-                Apple
-            </h2>
-
-            <a class="mx-2 badge" target="_blank"
-                href="https://apps.apple.com/us/app/csa-buddy/id6760242077?itscg=30200&itsct=apps_box_badge&mttnsubad=6760242077"
-                style="display: inline;">
-                <img src="badges/apple.svg" alt="Download on the App Store"
-                    style="width: 162px; height: 54px; vertical-align: middle; object-fit: contain;" />
-            </a>
-
-            <h2 class="title is-5 mt-4 mb-0">
-                Android
-            </h2>
-
-            <a class="mx-2 mt-0 badge" target="_blank" href="https://github.com/jschenke488/CSA-Buddy-Android/releases"
-                style="display: inline;">
-                <img src="badges/github.png" alt="Get it on GitHub"
-                    style="width: 181px; height: 82px; vertical-align: middle; object-fit: contain;" />
-            </a>
-
-            <a class="mx-2 badge" target="_blank"
-                href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.kenschenke.csabuddy%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fjschenke488%2FCSA-Buddy-Android%22%2C%22author%22%3A%22Jay%20Schenke%20%26%20Ken%20Schenke%22%2C%22name%22%3A%22CSA%20Buddy%22%2C%22additionalSettings%22%3A%22%7B%5C%22versionExtractionRegEx%5C%22%3A%5C%22v(.*)%5C%22%2C%5C%22matchGroupToUse%5C%22%3A%5C%22%241%5C%22%2C%5C%22appName%5C%22%3A%5C%22CSA%20Buddy%5C%22%2C%5C%22appAuthor%5C%22%3A%5C%22Jay%20Schenke%20%26%20Ken%20Schenke%5C%22%2C%5C%22about%5C%22%3A%5C%22This%20app%20is%20for%20teams%20and%20volunteers%20at%20FIRST%20Robotics%20Competition%20(FRC)%20and%20FIRST%20Tech%20Challenge%20(FTC)%20events%2C%20designed%20primarily%20for%20CSA%20(Control%20System%20Advisor)%20volunteers.%20It%27s%20a%20small%20app%20that%20shows%20a%20quick%20reference%20page%20with%20some%20helpful%20technical%20tidbits.%5C%22%7D%22%7D"
-                style="display: inline;">
-                <img src="badges/obtainium.png" alt="Get it on Obtainium"
-                    style="width: 181px; height: 82px; vertical-align: middle; object-fit: contain;" />
-            </a>
-
-            <a class="mx-2 badge" target="_blank" href="https://play.google.com/store/apps/details?id=com.kenschenke.csabuddy"
-                style="display: inline;">
-                <img src="badges/google-play.png" alt="Get it on Google Play"
-                    style="width: 181px; height: 82px; vertical-align: middle; object-fit: contain;" />
-            </a>
-        </div>
-
+<div role="main">
+    <div class="hideInWebView downloads">
         <h2 class="title is-4 mt-4">
-            Special Thanks
+            Downloads
         </h2>
-        <ul>
-            <li>Filip Kin (<a href="https://github.com/Filip-Kin">github.com/Filip-Kin</a>)</li>
-            <li>Saturn-VI (<a href="https://github.com/Saturn-VI">github.com/Saturn-VI</a>)</li>
-            <li>Quinton Rodgers (<a href="https://github.com/Quint0n53">github.com/Quint0n53</a>)</li>
-            <li><i>FIRST</i> in Michigan (<a href="https://firstinmichigan.us">firstinmichigan.us</a>)</li>
-        </ul>
 
-        <h2 class="title is-4 mt-4">Sources</h2>
-        <p>Android: <a
-                href="https://github.com/jschenke488/CSA-Buddy-Android">github.com/jschenke488/CSA-Buddy-Android</a>
-        </p>
-        <p>iOS: <a href="https://github.com/jschenke488/CSA-Buddy-iOS">github.com/jschenke488/CSA-Buddy-iOS</a></p>
-        <p>Assets: <a href="https://github.com/jschenke488/CSA-Buddy-Assets">github.com/jschenke488/CSA-Buddy-Assets</a>
-        </p>
+        <h2 class="title is-5 mt-4 mb-4">
+            Apple
+        </h2>
 
-        <h2 class="title is-4 mt-4">Attribution</h2>
-        <ul>
-            <li>"FRC Basic Wiring Diagram" by FRC® Team 3161 and Stefen Acepcion, source at
-                <a
-                    href="https://github.com/stefacep/2025-FRC-Control-System-Diagrams">https://github.com/stefacep/2025-FRC-Control-System-Diagrams</a>,
-                licensed under CC BY 4.0
-                (<a
-                    href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>).
-                No changes were made.
-            </li>
-            <li>"FRC REV Wiring Diagram" by FRC® Team 3161 and Stefen Acepcion, source at
-                <a
-                    href="https://github.com/stefacep/2025-FRC-Control-System-Diagrams">https://github.com/stefacep/2025-FRC-Control-System-Diagrams</a>,
-                licensed under CC BY 4.0
-                (<a
-                    href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>).
-                No changes were made.
-            </li>
-            <li>"FRC CTRE Wiring Diagram" by FRC® Team 3161 and Stefen Acepcion, source at
-                <a
-                    href="https://github.com/stefacep/2025-FRC-Control-System-Diagrams">https://github.com/stefacep/2025-FRC-Control-System-Diagrams</a>,
-                licensed under CC BY 4.0
-                (<a
-                    href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>).
-                No changes were made.
-            </li>
-            <li>"FTC Wiring Diagram (B1 - Basic)" by FRC® Team 3161 and Stefen Acepcion, source at
-                <a
-                    href="https://github.com/FIRST-Tech-Challenge/ftcdocs/tree/main/docs/source/control_hard_compon/rc_components/images">https://github.com/FIRST-Tech-Challenge/ftcdocs/tree/main/docs/source/control_hard_compon/rc_components/images</a>,
-                licensed under CC BY 4.0 (<a
-                    href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>).
-                No changes were made.
-            </li>
-            <li>"FTC Wiring Diagram (B2 - Advanced)" by FRC® Team 3161 and Stefen Acepcion, source at
-                <a
-                    href="https://github.com/FIRST-Tech-Challenge/ftcdocs/tree/main/docs/source/control_hard_compon/rc_components/images">https://github.com/FIRST-Tech-Challenge/ftcdocs/tree/main/docs/source/control_hard_compon/rc_components/images</a>,
-                licensed under CC BY 4.0 (<a
-                    href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>).
-                No changes were made.
-            </li>
-            <li>"Robot Radio Lights" by Vivid-Hosting, source at
-                <a
-                    href="https://frc-radio.vivid-hosting.net/overview/led-status-indications">https://frc-radio.vivid-hosting.net/overview/led-status-indications</a>.
-                No changes were made.
-            </li>
-            <li>"Font Awesome Free Web Fonts v7.3.1" by Fonticons, Inc., source at
-                <a href="https://fontawesome.com/download">https://fontawesome.com/download</a>, licensed under SIL OFL
-                1.1
-                (<a href="https://spdx.org/licenses/OFL-1.1.html">https://spdx.org/licenses/OFL-1.1.html</a>). No
-                changes were made.
-            </li>
-            <li>"FontAwesome.swift v1.9.1" by Thi Doan, source at
-                <a href="https://cocoapods.org/pods/FontAwesome.swift">https://cocoapods.org/pods/FontAwesome.swift</a>,
-                licensed under MIT License
-                (<a href="https://spdx.org/licenses/MIT.html">https://spdx.org/licenses/MIT.html</a>). No changes were
-                made.
-            </li>
-            <li>"Bulma v1.0.4" by Jeremy Thomas, source at
-                <a href="https://github.com/jgthms/bulma/tree/1.0.4">https://github.com/jgthms/bulma/tree/1.0.4</a>,
-                licensed under MIT License
-                (<a href="https://spdx.org/licenses/MIT.html">https://spdx.org/licenses/MIT.html</a>). No changes were
-                made.
-            </li>
-        </ul>
+        <a class="mx-2 badge" target="_blank"
+           href="https://apps.apple.com/us/app/csa-buddy/id6760242077?itscg=30200&itsct=apps_box_badge&mttnsubad=6760242077"
+           style="display: inline;">
+            <img src="badges/apple.svg" alt="Download on the App Store"
+                 style="width: 162px; height: 54px; vertical-align: middle; object-fit: contain;"/>
+        </a>
 
-        <h2 class="title is-4 mt-4">License</h2>
+        <h2 class="title is-5 mt-4 mb-0">
+            Android
+        </h2>
 
-        <p>MIT License</p><br>
+        <a class="mx-2 mt-0 badge" target="_blank" href="https://github.com/jschenke488/CSA-Buddy-Android/releases"
+           style="display: inline;">
+            <img src="badges/github.png" alt="Get it on GitHub"
+                 style="width: 181px; height: 82px; vertical-align: middle; object-fit: contain;"/>
+        </a>
 
-        <p>Copyright (c) 2026 Jay Schenke & Ken Schenke</p><br>
+        <a class="mx-2 badge" target="_blank"
+           href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.kenschenke.csabuddy%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fjschenke488%2FCSA-Buddy-Android%22%2C%22author%22%3A%22Jay%20Schenke%20%26%20Ken%20Schenke%22%2C%22name%22%3A%22CSA%20Buddy%22%2C%22additionalSettings%22%3A%22%7B%5C%22versionExtractionRegEx%5C%22%3A%5C%22v(.*)%5C%22%2C%5C%22matchGroupToUse%5C%22%3A%5C%22%241%5C%22%2C%5C%22appName%5C%22%3A%5C%22CSA%20Buddy%5C%22%2C%5C%22appAuthor%5C%22%3A%5C%22Jay%20Schenke%20%26%20Ken%20Schenke%5C%22%2C%5C%22about%5C%22%3A%5C%22This%20app%20is%20for%20teams%20and%20volunteers%20at%20FIRST%20Robotics%20Competition%20(FRC)%20and%20FIRST%20Tech%20Challenge%20(FTC)%20events%2C%20designed%20primarily%20for%20CSA%20(Control%20System%20Advisor)%20volunteers.%20It%27s%20a%20small%20app%20that%20shows%20a%20quick%20reference%20page%20with%20some%20helpful%20technical%20tidbits.%5C%22%7D%22%7D"
+           style="display: inline;">
+            <img src="badges/obtainium.png" alt="Get it on Obtainium"
+                 style="width: 181px; height: 82px; vertical-align: middle; object-fit: contain;"/>
+        </a>
 
-        <p>
-            Permission is hereby granted, free of charge, to any person obtaining a copy
-            of this software and associated documentation files (the "Software"), to deal
-            in the Software without restriction, including without limitation the rights
-            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-            copies of the Software, and to permit persons to whom the Software is
-            furnished to do so, subject to the following conditions:
-        </p><br>
-
-        <p>
-            The above copyright notice and this permission notice shall be included in all
-            copies or substantial portions of the Software.
-        </p><br>
-
-        <p>
-            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-            SOFTWARE.
-        </p><br>
+        <a class="mx-2 badge" target="_blank"
+           href="https://play.google.com/store/apps/details?id=com.kenschenke.csabuddy"
+           style="display: inline;">
+            <img src="badges/google-play.png" alt="Get it on Google Play"
+                 style="width: 181px; height: 82px; vertical-align: middle; object-fit: contain;"/>
+        </a>
     </div>
+
+    <h2 class="title is-4 mt-4">
+        Special Thanks
+    </h2>
+    <ul>
+        <li>Filip Kin (<a href="https://github.com/Filip-Kin">github.com/Filip-Kin</a>)</li>
+        <li>Saturn-VI (<a href="https://github.com/Saturn-VI">github.com/Saturn-VI</a>)</li>
+        <li>Quinton Rodgers (<a href="https://github.com/Quint0n53">github.com/Quint0n53</a>)</li>
+        <li><i>FIRST</i> in Michigan (<a href="https://firstinmichigan.us">firstinmichigan.us</a>)</li>
+    </ul>
+
+    <h2 class="title is-4 mt-4">Sources</h2>
+    <p>Android: <a
+            href="https://github.com/jschenke488/CSA-Buddy-Android">github.com/jschenke488/CSA-Buddy-Android</a>
+    </p>
+    <p>iOS: <a href="https://github.com/jschenke488/CSA-Buddy-iOS">github.com/jschenke488/CSA-Buddy-iOS</a></p>
+    <p>Assets: <a href="https://github.com/jschenke488/CSA-Buddy-Assets">github.com/jschenke488/CSA-Buddy-Assets</a>
+    </p>
+
+    <h2 class="title is-4 mt-4">Attribution</h2>
+    <ul>
+        <li>"FRC Basic Wiring Diagram" by FRC® Team 3161 and Stefen Acepcion, source at
+            <a
+                    href="https://github.com/stefacep/2025-FRC-Control-System-Diagrams">https://github.com/stefacep/2025-FRC-Control-System-Diagrams</a>,
+            licensed under CC BY 4.0
+            (<a
+                    href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>).
+            No changes were made.
+        </li>
+        <li>"FRC REV Wiring Diagram" by FRC® Team 3161 and Stefen Acepcion, source at
+            <a
+                    href="https://github.com/stefacep/2025-FRC-Control-System-Diagrams">https://github.com/stefacep/2025-FRC-Control-System-Diagrams</a>,
+            licensed under CC BY 4.0
+            (<a
+                    href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>).
+            No changes were made.
+        </li>
+        <li>"FRC CTRE Wiring Diagram" by FRC® Team 3161 and Stefen Acepcion, source at
+            <a
+                    href="https://github.com/stefacep/2025-FRC-Control-System-Diagrams">https://github.com/stefacep/2025-FRC-Control-System-Diagrams</a>,
+            licensed under CC BY 4.0
+            (<a
+                    href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>).
+            No changes were made.
+        </li>
+        <li>"FTC Wiring Diagram (B1 - Basic)" by FRC® Team 3161 and Stefen Acepcion, source at
+            <a
+                    href="https://github.com/FIRST-Tech-Challenge/ftcdocs/tree/main/docs/source/control_hard_compon/rc_components/images">https://github.com/FIRST-Tech-Challenge/ftcdocs/tree/main/docs/source/control_hard_compon/rc_components/images</a>,
+            licensed under CC BY 4.0 (<a
+                    href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>).
+            No changes were made.
+        </li>
+        <li>"FTC Wiring Diagram (B2 - Advanced)" by FRC® Team 3161 and Stefen Acepcion, source at
+            <a
+                    href="https://github.com/FIRST-Tech-Challenge/ftcdocs/tree/main/docs/source/control_hard_compon/rc_components/images">https://github.com/FIRST-Tech-Challenge/ftcdocs/tree/main/docs/source/control_hard_compon/rc_components/images</a>,
+            licensed under CC BY 4.0 (<a
+                    href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>).
+            No changes were made.
+        </li>
+        <li>"Robot Radio Lights" by Vivid-Hosting, source at
+            <a
+                    href="https://frc-radio.vivid-hosting.net/overview/led-status-indications">https://frc-radio.vivid-hosting.net/overview/led-status-indications</a>.
+            No changes were made.
+        </li>
+        <li>"Font Awesome Free Web Fonts v7.3.1" by Fonticons, Inc., source at
+            <a href="https://fontawesome.com/download">https://fontawesome.com/download</a>, licensed under SIL OFL
+            1.1
+            (<a href="https://spdx.org/licenses/OFL-1.1.html">https://spdx.org/licenses/OFL-1.1.html</a>). No
+            changes were made.
+        </li>
+        <li>"FontAwesome.swift v1.9.1" by Thi Doan, source at
+            <a href="https://cocoapods.org/pods/FontAwesome.swift">https://cocoapods.org/pods/FontAwesome.swift</a>,
+            licensed under MIT License
+            (<a href="https://spdx.org/licenses/MIT.html">https://spdx.org/licenses/MIT.html</a>). No changes were
+            made.
+        </li>
+        <li>"Bulma v1.0.4" by Jeremy Thomas, source at
+            <a href="https://github.com/jgthms/bulma/tree/1.0.4">https://github.com/jgthms/bulma/tree/1.0.4</a>,
+            licensed under MIT License
+            (<a href="https://spdx.org/licenses/MIT.html">https://spdx.org/licenses/MIT.html</a>). No changes were
+            made.
+        </li>
+    </ul>
+
+    <h2 class="title is-4 mt-4">License</h2>
+
+    <p>MIT License</p><br>
+
+    <p>Copyright (c) 2026 Jay Schenke & Ken Schenke</p><br>
+
+    <p>
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+    </p><br>
+
+    <p>
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+    </p><br>
+
+    <p>
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+    </p><br>
+</div>
 
 </body>
 
