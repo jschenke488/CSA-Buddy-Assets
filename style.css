@@ -266,10 +266,6 @@ ul {
     animation-timing-function: steps(2, jump-none);
 }
 
-.vivid-blink-blink-pause {
-    animation: vivid-blink-blink-pause 2400ms infinite linear;
-}
-
 @keyframes blink {
     100% {
         background-color: black;
@@ -575,40 +571,6 @@ ul {
 }
 
 @keyframes blink-black {
-    100% {
-        background-color: black;
-    }
-}
-
-@keyframes vivid-blink-blink-pause {
-    0% {
-        background-color: green;
-    }
-
-    20% {
-        background-color: green;
-    }
-
-    20.0001% {
-        background-color: black;
-    }
-
-    40% {
-        background-color: black;
-    }
-
-    40.0001% {
-        background-color: green;
-    }
-
-    60% {
-        background-color: green;
-    }
-
-    60.0001% {
-        background-color: black;
-    }
-
     100% {
         background-color: black;
     }
