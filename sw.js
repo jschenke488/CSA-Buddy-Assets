@@ -1,5 +1,5 @@
 // Bump this on every deploy so clients pick up fresh assets.
-const CACHE_VERSION = 'csa-buddy-sw-v8'
+const CACHE_VERSION = 'csa-buddy-sw-v9'
 
 const PRECACHE_URLS = [
     '/aboutpage.html',
@@ -23,6 +23,10 @@ const PRECACHE_URLS = [
     '/frc-control-system-layout-rev.svg',
     '/ftc-control-system-layout-b1.svg',
     '/ftc-control-system-layout-b2.svg',
+    '/guides/frc-connectivity-guide.html',
+    '/guides/ftc-connectivity-guide.html',
+    '/guides/index.html',
+    '/guides/wiring-troubleshooting-guide.html',
     '/index.html',
     '/reference-accessible.html',
     '/reference.html',
