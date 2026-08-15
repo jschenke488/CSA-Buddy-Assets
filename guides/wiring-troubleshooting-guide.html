@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -17,6 +16,15 @@
     <link rel="stylesheet" href="../fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="../fontawesome/css/solid.min.css">
     <script src="../script.js"></script>
+    <style>
+        .checklist label {
+            display: block;
+        }
+
+        .checklist input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+    </style>
 </head>
 
 <body class="isWebView m-2">
@@ -51,17 +59,42 @@
     </ul>
 </div>
 
-<a href="../guides/index.html" tabindex="1" class="has-text-inherit is-size-5">
+<a href="../guides/index.html" class="has-text-inherit is-size-5">
     <span class="icon is-small mr-2"><i class="fas fa-left-long" aria-hidden="true"></i></span>
     <span>Back</span>
 </a>
 
 <div role="banner">
-    <h1 class="title is-3 mt-3">Wiring Troubleshooting Guide</h1>
+    <h1 class="title is-3 mt-3 mb-5">Wiring Troubleshooting Guide</h1>
 </div>
 
 <div role="main">
-    <h2 class="subtitle">Work in Progress</h2>
+    <h1 class="title is-4 mb-2">Common Issues Checklist</h1>
+    <div class="checklist">
+        <label><input type="checkbox"><span>Tug-test the Weidmuller and Molex connectors. Check that wires are properly inserted on PDP/PDH, roboRIO/SystemCore, and radio.</span></label>
+        <label><input type="checkbox"><span>Connectors can short if wires are not stripped to the correct length. Low-current channel, switchable, and CAN wires should be stripped to 0.33" (8 mm), high-current channel wires to 0.5" (12 mm), and battery input wires to 0.75" (19 mm). See the "FRC Basic Wiring Diagram" on the reference page for more details.</span></label>
+        <label><input type="checkbox"><span>Confirm that CAN and power wires are not flipped.</span></label>
+        <label><input type="checkbox"><span>Replace Ethernet cables if the clip is missing.</span></label>
+        <label><input type="checkbox"><span>Use hot glue to secure each connection on the roboRIO/SystemCore and radio. Cover unused ports with electrical tape.</span></label>
+        <label><input type="checkbox"><span>Tighten nut-and-bolt fasteners. Nut-and-bolt connections should not rotate by hand.</span></label>
+        <label><input type="checkbox"><span>Secure cables and wires near moving parts. Add enough slack to prevent strain.</span></label>
+        <label><input type="checkbox"><span>Check for wire "whiskers" and metal debris. When stripping wire, prevent pieces from falling into the robot by holding a plate or bowl under the wire.</span></label>
+        <label><input type="checkbox"><span>Check continuity using a multimeter on wires with a Wago connector.</span></label>
+        <label><input type="checkbox"><span>You can reproduce loose-wire issues in the pit by picking up one side of the robot and dropping it.</span></label>
+        <label><input type="checkbox"><span>Tether using Ethernet to the DS port on the radio and check the connection is stable. USB tethering will not test the full networking path.</span></label>
+        <label><input type="checkbox"><span>Check battery voltage, especially while driving, in the driver station. Brownouts typically occur below around 7 V. A fully charged battery should be 12-13 V.</span></label>
+        <label><input type="checkbox"><span>Use Phoenix Tuner or REV Hardware Client to check that CAN IDs are not conflicting.</span></label>
+        <label><input type="checkbox"><span>Reseat fuses and breakers on the PDP/PDH.</span></label>
+        <label><input type="checkbox"><span>With a REV PDH, check for any reported faults using REV Hardware Client. Replace any broken fuses or breakers.</span></label>
+        <label><input type="checkbox"><span>Ensure the CAN bus is properly terminated.</span></label>
+        <label><input type="checkbox"><span>Add service loops and/or wire tension guards.</span></label>
+    </div>
+    <h1 class="title is-4 mt-4 mb-2">Vendor Guides</h1>
+    <ul>
+        <li><a href="https://v6.docs.ctr-electronics.com/en/stable/docs/troubleshooting/canbus-troubleshooting.html">CTRE CAN Bus Troubleshooting</a></li>
+        <li><a href="https://docs.revrobotics.com/docs/ion/help-and-how-to/troubleshooting">REV Troubleshooting</a></li>
+        <li><a href="https://docs.wpilib.org/en/stable/docs/hardware/hardware-basics/preemptive-troubleshooting.html">WPI Robot Preemptive Troubleshooting</a></li>
+    </ul>
 </div>
 
 </body>
