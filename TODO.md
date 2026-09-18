@@ -8,11 +8,15 @@ PRs are welcome for anything on this to-do list
 
 ## New Content
 
-- [ ] Add a wiring troubleshooting guide. Details on how to troubleshoot issues, like checking CAN wires not being flipped, checking strip length, etc.
+- [x] Add a wiring troubleshooting guide. Details on how to troubleshoot issues, like checking CAN wires not being flipped, checking strip length, etc.
 - [ ] Coverage for vision coprocessors other than Limelight
-- [ ] More status codes for the Vivid radio
+- [x] More status codes for the Vivid radio
 - [ ] Disruption recovery timing. This section would include details on how long different devices take to recover from a disruption. For example, if a radio gets disconnected, this section would say how long it would take to reconnect.
+- [ ] Field connectivity guide for FRC
+- [ ] Field connectivity guide for FTC
+- [ ] More content for FTC (need suggestions)
 
 ## Miscellaneous
 
 - [ ] Low priority. Split the reference page into multiple pages. For the LEDs, add a devices section with a grid layout showing each device with a picture of the device to identify it. Tap or click on a device to show the list of LEDs and potentially other useful information.
+- [ ] Split FRC and FTC into their own tabs
