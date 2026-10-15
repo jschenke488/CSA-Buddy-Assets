@@ -516,7 +516,7 @@
         </details>
 
         <details>
-            <summary>SystemCore Lights</summary>
+            <summary>Systemcore Lights</summary>
 
             <table cellpadding="5" cellspacing="0" class="led-table">
                 <tr>
@@ -1624,7 +1624,15 @@
         <br>
 
         <details>
-            <summary>FRC Basic Wiring Diagram</summary>
+            <summary>FRC Basic Wiring Diagram (Systemcore)</summary>
+
+            <img alt="Layout of the core components of the control system and introductory information for them"
+                src="frc-control-system-layout-basic-systemcore.svg" style="background:white;max-width:90%">
+            <p>Diagram from FRC® Team 3161 and Stefen Acepcion.</p>
+        </details>
+
+        <details>
+            <summary>FRC Basic Wiring Diagram (RoboRIO)</summary>
 
             <img alt="Layout of the core components of the control system and introductory information for them"
                 src="frc-control-system-layout-basic.svg" style="background:white;max-width:90%">
@@ -1632,19 +1640,19 @@
         </details>
 
         <details>
-            <summary>FRC REV Wiring Diagram</summary>
+            <summary>FRC REV Wiring Diagram (RoboRIO)</summary>
 
             <img alt="Layout of all popular components of the control system including REV Control System Components"
                 src="frc-control-system-layout-rev.svg" style="background:white;max-width:90%">
-            <p>Diagram from FRC® Team 3161 and Stefen Acepcion.</p>
+            <p>Diagram from FRC® Team 3161 and Stefen Acepcion. Systemcore diagram coming soon.</p>
         </details>
 
         <details>
-            <summary>FRC CTRE Wiring Diagram</summary>
+            <summary>FRC CTRE Wiring Diagram (RoboRIO)</summary>
 
             <img alt="Layout of all popular components of the control system including CTRE Control System Components"
                 src="frc-control-system-layout-ctre.svg" style="background:white;max-width:90%">
-            <p>Diagram from FRC® Team 3161 and Stefen Acepcion.</p>
+            <p>Diagram from FRC® Team 3161 and Stefen Acepcion. Systemcore diagram coming soon.</p>
         </details>
 
         <details>
@@ -1840,11 +1848,7 @@
                     <td>
                         <table class="section-table">
                             <tr>
-                                <td width="125">Robot Radio</td>
-                                <td>10.TE.AM.1</td>
-                            </tr>
-                            <tr>
-                                <td>roboRIO/SystemCore</td>
+                                <td>roboRIO</td>
                                 <td>10.TE.AM.2</td>
                             </tr>
                             <tr>
@@ -1856,19 +1860,39 @@
                                 <td>roborio-TEAM-frc.local</td>
                             </tr>
                             <tr>
-                                <td>SystemCore Wi-Fi</td>
+                                <td></td>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td>Systemcore</td>
+                                <td>10.TE.AM.2</td>
+                            </tr>
+                            <tr>
+                                <td>Systemcore Wi-Fi</td>
                                 <td>172.30.0.1</td>
                             </tr>
                             <tr>
-                                <td>SystemCore USB (Windows)</td>
+                                <td>Systemcore USB (Windows)</td>
                                 <td>172.28.0.1</td>
                             </tr>
                             <tr>
-                                <td>SystemCore USB (Mac/Linux)</td>
+                                <td>Systemcore USB (Mac/Linux)</td>
                                 <td>172.29.0.1</td>
                             </tr>
                             <tr>
-                                <td>Field AP</td>
+                                <td></td>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td>Robot Radio</td>
+                                <td>10.TE.AM.1</td>
+                            </tr>
+                            <tr>
+                                <td>Field Network / Reserved</td>
+                                <td>10.TE.AM.3</td>
+                            </tr>
+                            <tr>
+                                <td>Network Gateway / Field AP</td>
                                 <td>10.TE.AM.4</td>
                             </tr>
                             <tr>
@@ -1878,6 +1902,22 @@
                             <tr>
                                 <td></td>
                                 <td><span class="highlight">(subnet 255.0.0.0)</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td>Additional On-Robot Devices</td>
+                                <td>10.TE.AM.6 to 10.TE.AM.19</td>
+                            </tr>
+                            <tr>
+                                <td>Field DHCP Pool (Avoid Static)</td>
+                                <td>10.TE.AM.20 to 10.TE.AM.199</td>
+                            </tr>
+                            <tr>
+                                <td>Robot Radio DHCP Pool (Avoid Static)</td>
+                                <td>10.TE.AM.200 to 10.TE.AM.219</td>
                             </tr>
                         </table>
                     </td>

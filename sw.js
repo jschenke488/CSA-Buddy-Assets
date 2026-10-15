@@ -1,5 +1,5 @@
 // Bump this on every deploy so clients pick up fresh assets.
-const CACHE_VERSION = 'csa-buddy-sw-v21'
+const CACHE_VERSION = 'csa-buddy-sw-v22'
 
 const PRECACHE_URLS = [
     '/aboutpage.html',
@@ -18,6 +18,7 @@ const PRECACHE_URLS = [
     '/fontawesome/css/fontawesome.min.css',
     '/fontawesome/css/solid.min.css',
     '/fontawesome/webfonts/fa-solid-900.woff2',
+    '/frc-control-system-layout-basic-systemcore.svg',
     '/frc-control-system-layout-basic.svg',
     '/frc-control-system-layout-ctre.svg',
     '/frc-control-system-layout-rev.svg',

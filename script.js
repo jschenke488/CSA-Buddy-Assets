@@ -47,6 +47,7 @@ function accessibilityRedirect() {
 document.addEventListener('DOMContentLoaded', () => {
     if (!isWebView) {
         document.body.classList.remove('isWebView')
+        document.documentElement.style.setProperty('margin-bottom', '3em')
 
         // Register service worker to allow offline access. Skip registration if browser doesn't support service workers, or if running locally.
         const localHostnames = ['localhost', '127.0.0.1', '[::1]']
