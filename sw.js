@@ -1,5 +1,5 @@
 // Bump this on every deploy so clients pick up fresh assets.
-const CACHE_VERSION = 'csa-buddy-sw-v22'
+const CACHE_VERSION = 'csa-buddy-sw-v23'
 
 const PRECACHE_URLS = [
     '/aboutpage.html',
@@ -52,13 +52,11 @@ async function notifyClients(ready) {
 }
 
 self.addEventListener('install', (event) => {
-    event.waitUntil(
-        caches.open(CACHE_VERSION)
-            .then((cache) => cache.addAll(PRECACHE_URLS))
-            .catch((err) => console.error('Precaching failed:', err))
-            .then(() => isFullyCached())
-            .then((ready) => notifyClients(ready))
-    )
+    event.waitUntil(caches.open(CACHE_VERSION)
+        .then((cache) => cache.addAll(PRECACHE_URLS))
+        .catch((err) => console.error('Precaching failed:', err))
+        .then(() => isFullyCached())
+        .then((ready) => notifyClients(ready)))
     self.skipWaiting()
 })
 
@@ -69,12 +67,9 @@ self.addEventListener('message', (event) => {
 })
 
 self.addEventListener('activate', (event) => {
-    event.waitUntil(
-        caches.keys().then((keys) =>
-            Promise.all(keys.filter((key) => key !== CACHE_VERSION).map((key) => caches.delete(key)))
-        )
-    )
-    self.clients.claim().then(_ => {})
+    event.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((key) => key !== CACHE_VERSION).map((key) => caches.delete(key)))))
+    self.clients.claim().then(_ => {
+    })
 })
 
 // Cache-first, falling back to network. Successful network responses are
@@ -90,19 +85,17 @@ self.addEventListener('fetch', (event) => {
         return
     }
 
-    event.respondWith(
-        caches.match(event.request).then((cached) => {
-            if (cached) return cached
+    event.respondWith(caches.match(event.request).then((cached) => {
+        if (cached) return cached
 
-            return fetch(event.request).then((response) => {
-                if (response.ok) {
-                    const responseClone = response.clone()
-                    caches.open(CACHE_VERSION).then((cache) => cache.put(event.request, responseClone))
-                }
-                return response
-            }).catch(() => {
-                if (event.request.mode === 'navigate') return caches.match('/reference.html')
-            })
+        return fetch(event.request).then((response) => {
+            if (response.ok) {
+                const responseClone = response.clone()
+                caches.open(CACHE_VERSION).then((cache) => cache.put(event.request, responseClone))
+            }
+            return response
+        }).catch(() => {
+            if (event.request.mode === 'navigate') return caches.match('/reference.html')
         })
-    )
+    }))
 })

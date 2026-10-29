@@ -11,6 +11,8 @@ All the content is in reference.html. LED patterns are done using CSS found in s
 </style>
 ```
 
+Whenever making an update, change the version number in aboutpage.html and increment the cache version in sw.js. All files that need to be available offline should be added to the precache URLs list in sw.js.
+
 ## Attribution
 
 * "FRC Basic Wiring Diagram" by FRC® Team 3161 and Stefen Acepcion, source at [https://github.com/stefacep/2025-FRC-Control-System-Diagrams](https://github.com/stefacep/2025-FRC-Control-System-Diagrams), licensed under CC BY 4.0 ([https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)). No changes were made.
